@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Fitness Coach - Project Documentation Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: counter(page);
+        font-size: 9pt;
+        color: #64748b;
+      }
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    /* Title Page */
+    .title-page {
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 90vh;
+      border: 3px double #0284c7;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .title-page h1 {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #0f172a;
+      text-align: center;
+      margin-bottom: 12px;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      border-bottom: 3px solid #0284c7;
+      padding-bottom: 18px;
+    }
+
+    .title-page h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #0284c7;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .meta-box {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 25px 0;
+      font-size: 10pt;
+    }
+
+    .meta-box p {
+      margin: 6px 0;
+    }
+
+    /* Evaluation Table */
+    .eval-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      font-size: 9.5pt;
+    }
+
+    .eval-table th, .eval-table td {
+      border: 1px solid #94a3b8;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .eval-table th {
+      background: #e2e8f0;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* General Typography */
+    h1 {
+      font-size: 18pt;
+      color: #0f172a;
+      margin-top: 28px;
+      margin-bottom: 14px;
+      font-weight: 800;
+      page-break-after: avoid;
+    }
+
+    h2 {
+      font-size: 15pt;
+      color: #0369a1;
+      margin-top: 26px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 6px;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      font-size: 12.5pt;
+      color: #0f172a;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      page-break-after: avoid;
+    }
+
+    h4 {
+      font-size: 11pt;
+      color: #334155;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 0 0 12px 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #cbd5e1;
+      margin: 24px 0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 7px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    /* Code Blocks */
+    pre {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #0284c7;
+      padding: 12px 14px;
+      border-radius: 4px;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 8.5pt;
+      line-height: 1.45;
+      overflow-x: auto;
+      margin: 14px 0;
+      page-break-inside: avoid;
+      color: #0f172a;
+    }
+
+    code {
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 9pt;
+      background: #f1f5f9;
+      padding: 2px 5px;
+      border-radius: 3px;
+      color: #0369a1;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+
+    /* Screenshot Placeholders */
+    .screenshot-container {
+      margin: 20px 0 24px 0;
+      page-break-inside: avoid;
+    }
+
+    .screenshot-placeholder {
+      border: 2px dashed #0284c7;
+      background: #f0f9ff;
+      border-radius: 8px;
+      padding: 40px 20px;
+      text-align: center;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .camera-icon {
+      font-size: 26pt;
+      margin-bottom: 8px;
+    }
+
+    .placeholder-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0369a1;
+      letter-spacing: 0.5px;
+    }
+
+    .placeholder-subtitle {
+      font-size: 8.5pt;
+      color: #64748b;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .screenshot-caption {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .screenshot-note {
+      font-size: 8.5pt;
+      color: #475569;
+      font-style: italic;
+      margin-top: 3px;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    /* Break rules */
+    .page-break {
+      page-break-before: always;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      h2 {
+        page-break-before: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>AI FITNESS COACH: AN INTELLIGENT EVIDENCE-GROUNDED EXERCISE KINEMATICS AND NUTRITION COACHING PLATFORM</h1>
+<h2>COMPREHENSIVE TECHNICAL PROJECT REPORT AND SYSTEM SPECIFICATION</h2>
+<hr />
+<p><strong>Academic Year:</strong> 2025–2026<br />
+<strong>Document Classification:</strong> Final Project Technical Documentation &amp; Faculty Evaluation Report<br />
+<strong>Target Systems:</strong> Web-Based Client (React 18 + Vite), Machine Learning Edge Runtime (MediaPipe Tasks Vision Wasm/GPU), Real-Time Relational Backend (FastAPI + SQLAlchemy + SQLite), Vector Search Engine (FAISS + SentenceTransformers), and Retrieval-Augmented Generation Service (Google GenAI Gemini).<br />
+<strong>Repository Location:</strong> <code>ai-fitness-coach</code></p>
+<hr />
+<h3>FACULTY EVALUATION AND APPROVAL</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Evaluation Metric</th>
+<th style="text-align:center">Maximum Score</th>
+<th style="text-align:center">Awarded Score</th>
+<th style="text-align:left">Faculty Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>System Architecture &amp; Design</strong></td>
+<td style="text-align:center">20</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Computer Vision &amp; Kinematics Implementation</strong></td>
+<td style="text-align:center">25</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI RAG Pipeline &amp; Biometric Evidence Grounding</strong></td>
+<td style="text-align:center">20</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Backend APIs &amp; Database Integrity</strong></td>
+<td style="text-align:center">15</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Code Quality, Testing &amp; Verification</strong></td>
+<td style="text-align:center">10</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Documentation &amp; Technical Presentation</strong></td>
+<td style="text-align:center">10</td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>TOTAL SCORE</strong></td>
+<td style="text-align:center"><strong>100</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evaluator Name:</strong> ____________________________________<br />
+<strong>Signature &amp; Date:</strong> __________________________________</p>
+<hr />
+<h2>TABLE OF CONTENTS</h2>
+<ol>
+<li><a href="#1-introduction-and-project-objectives">Introduction and Project Objectives</a>
+<ul>
+<li>1.1 Problem Statement</li>
+<li>1.2 Project Objectives</li>
+<li>1.3 Target Audience and Use Cases</li>
+<li>1.4 Scope and Boundaries</li>
+</ul>
+</li>
+<li><a href="#2-technology-stack-and-system-architecture">Technology Stack and System Architecture</a>
+<ul>
+<li>2.1 Technology Stack Inventory</li>
+<li>2.2 High-Level System Architecture</li>
+<li>2.3 Component Interaction and Data Flow Diagram</li>
+<li>2.4 Edge Computer Vision Pipeline Architecture</li>
+<li>2.5 Evidence-Grounded RAG Subsystem Architecture</li>
+</ul>
+</li>
+<li><a href="#3-installation-configuration-and-application-startup">Installation, Configuration, and Application Startup</a>
+<ul>
+<li>3.1 Hardware and Environment Prerequisites</li>
+<li>3.2 Backend Setup and Dependency Installation</li>
+<li>3.3 Evidence Vector Corpus Ingestion</li>
+<li>3.4 Frontend Setup and Configuration</li>
+<li>3.5 Launching Services and Port Verification</li>
+</ul>
+</li>
+<li><a href="#4-complete-feature-documentation">Complete Feature Documentation</a>
+<ul>
+<li>4.1 Secure Authentication and Role-Based Access Control</li>
+<li>4.2 Biometric Onboarding and Athlete Health Profiling</li>
+<li>4.3 Interactive Main Athlete Dashboard</li>
+<li>4.4 Live Workout Tracking and Computer Vision Feedback</li>
+<li>4.5 Biomechanical Kinematic Analyzers (All Six Exercises)</li>
+<li>4.6 Multi-Stage State Machine and Anti-Bounce Repetition Filtering</li>
+<li>4.7 Evidence-Grounded AI Fitness Chatbot (RAG System)</li>
+<li>4.8 Scientific Nutrition, Water, and Diet Management</li>
+<li>4.9 Workout History, Progression Analytics, and Benchmarks</li>
+<li>4.10 Platform Administration, Diagnostics, and Audit Logs</li>
+</ul>
+</li>
+<li><a href="#5-step-by-step-workflows-and-procedural-specifications">Step-by-Step Workflows and Procedural Specifications</a>
+<ul>
+<li>5.1 User Registration and Authentication Workflow</li>
+<li>5.2 User Onboarding and Health Profile Generation</li>
+<li>5.3 Live Workout Pose Detection and Real-Time Tracking Workflow</li>
+<li>5.4 Barbell Deep Squat Kinematic Analysis Workflow</li>
+<li>5.5 Chest Push-Up Kinematic Analysis Workflow</li>
+<li>5.6 Romanian Deadlift Kinematic Analysis Workflow</li>
+<li>5.7 Dumbbell Bicep Curl Kinematic Analysis Workflow</li>
+<li>5.8 Forward Walking Lunge Kinematic Analysis Workflow</li>
+<li>5.9 Isometric Core Plank Kinematic Analysis Workflow</li>
+<li>5.10 Evidence-Grounded AI Chatbot Query and RAG Processing</li>
+<li>5.11 Nutrition Logging, Target Adjustment, and Hydration Tracking</li>
+<li>5.12 Platform Administration, User Moderation, and Diagnostics</li>
+</ul>
+</li>
+<li><a href="#6-backend-apis-database-models-and-project-file-structure">Backend APIs, Database Models, and Project File Structure</a>
+<ul>
+<li>6.1 Database Architecture and Entity Relationship Model</li>
+<li>6.2 Complete RESTful API Endpoint Catalog</li>
+<li>6.3 Project File Inventory and Architectural Organization</li>
+</ul>
+</li>
+<li><a href="#7-testing-verification-limitations-and-troubleshooting">Testing, Verification, Limitations, and Troubleshooting</a>
+<ul>
+<li>7.1 Automated Unit and Biomechanical Test Suite</li>
+<li>7.2 Backend Database and Service Verification Tests</li>
+<li>7.3 Live Chatbot Latency and RAG Benchmark Verification</li>
+<li>7.4 Production Build and Static Lint Verification</li>
+<li>7.5 Implemented vs. Unverified/Incomplete Features</li>
+<li>7.6 Known Limitations and Biomechanical Constraints</li>
+<li>7.7 System Troubleshooting Guide</li>
+</ul>
+</li>
+<li><a href="#8-conclusion-and-future-roadmap">Conclusion and Future Roadmap</a>
+<ul>
+<li>8.1 Summary of Contributions</li>
+<li>8.2 Future Enhancements</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>1. INTRODUCTION AND PROJECT OBJECTIVES</h2>
+<h3>1.1 Problem Statement</h3>
+<p>Physical exercise is essential for cardiovascular health, musculoskeletal strength, and metabolic disease prevention. However, unsupervised resistance training carries substantial risks:</p>
+<ol>
+<li><strong>Injuries from Improper Biomechanical Form:</strong> Lifting weights or performing bodyweight movements with incorrect joint alignment (e.g., knee valgus during squats, lumbar hyper-extension during push-ups, or rounding the thoracic spine during deadlifts) frequently leads to acute ligament tears, disc herniations, and chronic joint degeneration.</li>
+<li><strong>High Cost and Inaccessibility of Personal Trainers:</strong> Certified human trainers provide real-time form correction, but personal coaching is economically prohibitive for the majority of individuals, costing $50 to $120 per session.</li>
+<li><strong>Pervasive Fitness Disinformation and Generative AI Hallucinations:</strong> When gym-goers turn to generic conversational AI chatbots, these models routinely hallucinate unverified fitness advice, invent non-existent scientific studies, or suggest dangerous dietary deficits and excessive loads that ignore user injuries.</li>
+<li><strong>Fragmented Fitness Ecosystems:</strong> Modern fitness enthusiasts are forced to juggle multiple disjointed applications: one for rep counting, one for diet logging, and another for fitness articles, resulting in poor adherence and data fragmentation.</li>
+</ol>
+<h3>1.2 Project Objectives</h3>
+<p>The <strong>AI Fitness Coach</strong> web platform resolves these limitations through an integrated, multi-disciplinary system:</p>
+<ul>
+<li><strong>Client-Side Edge Computer Vision:</strong> Execute monocular pose estimation entirely in the client browser using WebAssembly (Wasm) and WebGL GPU acceleration via Google MediaPipe Tasks Vision, eliminating video streaming latency and safeguarding user privacy.</li>
+<li><strong>Form-Validated Kinematic Repetition Counting:</strong> Implement mathematical joint angle calculation and multi-frame state machines across six foundational exercises (Squats, Push-ups, Deadlifts, Bicep Curls, Lunges, and Planks) with strict parallel depth verification, anti-bounce tempo validation, and audio-visual coaching cues.</li>
+<li><strong>Evidence-Grounded RAG AI Coaching:</strong> Build a Retrieval-Augmented Generation (RAG) pipeline powered by Facebook AI Similarity Search (FAISS) and SentenceTransformers (<code>all-MiniLM-L6-v2</code>) over 123 peer-reviewed sports science chunks. Query Google Gemini with strict negative constraints, ensuring advice cites recognized authorities (ACSM, BJSM, ISSN, WHO) with verified DOIs/PMIDs and never fabricates claims.</li>
+<li><strong>Holistic Training, Nutrition, and Analytics Tracking:</strong> Provide full-stack relational persistence via FastAPI and SQLite for workout history, macronutrient targets, water consumption, and personal benchmarks.</li>
+<li><strong>Administrative Governance:</strong> Implement a dedicated operations portal for user status management, hardware health diagnostics, and platform audit logging.</li>
+</ul>
+<h3>1.3 Target Audience and Use Cases</h3>
+<ul>
+<li><strong>Home Gym and Remote Athletes:</strong> Individuals training without a live coach who need real-time auditory cues on depth, posture, and rep counts.</li>
+<li><strong>Beginner Exercisers:</strong> Novices learning foundational compound movement mechanics safely with immediate corrective prompts before loading heavy weights.</li>
+<li><strong>Sports Science Students and Researchers:</strong> Athletes seeking scientifically validated recommendations on progressive overload, protein dosing, and hydration strategies with formal peer-reviewed citations.</li>
+<li><strong>Gym and Enterprise Administrators:</strong> Fitness club staff monitoring athlete adherence, tracking platform utilization, and auditing system throughput.</li>
+</ul>
+<h3>1.4 Scope and Boundaries</h3>
+<ul>
+<li><strong>In Scope:</strong> Monocular 2D video landmark extraction via standard webcams; deterministic angle calculations on sagittal and frontal planes; 6 exercise analyzers; local FAISS vector search; Gemini LLM generation with citation enforcement; SQLite persistence; responsive dark-mode UI.</li>
+<li><strong>Out of Scope:</strong> Multi-camera 3D motion-capture studio triangulation; medical diagnostic prescription for acute injuries; proprietary wearable hardware integration (e.g., smartwatches, EMG electrodes).</li>
+</ul>
+<hr />
+<h2>2. TECHNOLOGY STACK AND SYSTEM ARCHITECTURE</h2>
+<h3>2.1 Technology Stack Inventory</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Architectural Tier</th>
+<th style="text-align:left">Technology / Library</th>
+<th style="text-align:center">Version</th>
+<th style="text-align:left">Purpose in Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Frontend Framework</strong></td>
+<td style="text-align:left">React.js</td>
+<td style="text-align:center"><code>18.3.1</code></td>
+<td style="text-align:left">Component-based reactive UI rendering and state management</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Build Tool &amp; Bundler</strong></td>
+<td style="text-align:left">Vite</td>
+<td style="text-align:center"><code>5.4.2</code></td>
+<td style="text-align:left">High-performance Hot Module Replacement (HMR) and production bundling</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Styling &amp; Design System</strong></td>
+<td style="text-align:left">Tailwind CSS</td>
+<td style="text-align:center"><code>3.4.1</code></td>
+<td style="text-align:left">Bespoke high-contrast dark theme, typography, and responsive layouts</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Icons &amp; Visual Assets</strong></td>
+<td style="text-align:left">Lucide React</td>
+<td style="text-align:center"><code>0.344.0</code></td>
+<td style="text-align:left">Comprehensive iconography for UI controls and biometric status indicators</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Data Visualization</strong></td>
+<td style="text-align:left">Chart.js &amp; React-Chartjs-2</td>
+<td style="text-align:center"><code>4.4.1</code> / <code>5.2.0</code></td>
+<td style="text-align:left">Interactive charts for form trends, rep distributions, and weight metrics</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Client-Side Vision ML</strong></td>
+<td style="text-align:left"><code>@mediapipe/tasks-vision</code></td>
+<td style="text-align:center"><code>0.10.14</code></td>
+<td style="text-align:left">Client-side 33-point human skeletal pose landmark extraction</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Celebration Effects</strong></td>
+<td style="text-align:left">Canvas Confetti</td>
+<td style="text-align:center"><code>1.9.4</code></td>
+<td style="text-align:left">Gamified visual feedback upon workout completion</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Backend REST Engine</strong></td>
+<td style="text-align:left">FastAPI</td>
+<td style="text-align:center"><code>0.141.1</code></td>
+<td style="text-align:left">High-throughput asynchronous REST API and dependency injection</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ASGI Web Server</strong></td>
+<td style="text-align:left">Uvicorn</td>
+<td style="text-align:center"><code>0.52.4</code></td>
+<td style="text-align:left">Production-grade ASGI server handling asynchronous HTTP requests</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Data Modeling &amp; ORM</strong></td>
+<td style="text-align:left">SQLAlchemy</td>
+<td style="text-align:center"><code>2.1.6</code></td>
+<td style="text-align:left">Object-Relational Mapping for SQLite with cascade relationships</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Data Validation</strong></td>
+<td style="text-align:left">Pydantic</td>
+<td style="text-align:center"><code>2.13.5</code></td>
+<td style="text-align:left">Strict schema parsing, type coercion, and request validation</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Security &amp; Tokens</strong></td>
+<td style="text-align:left">Bcrypt &amp; PyJWT</td>
+<td style="text-align:center"><code>5.0.0</code> / <code>2.15.1</code></td>
+<td style="text-align:left">Salting (12 rounds) and HMAC-SHA256 JWT access tokens</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Vector Search Engine</strong></td>
+<td style="text-align:left">FAISS CPU (<code>faiss-cpu</code>)</td>
+<td style="text-align:center"><code>1.15.0</code></td>
+<td style="text-align:left">Fast inner-product cosine similarity retrieval across vector embeddings</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Dense Embeddings</strong></td>
+<td style="text-align:left">SentenceTransformers</td>
+<td style="text-align:center"><code>6.0.1</code></td>
+<td style="text-align:left"><code>all-MiniLM-L6-v2</code> 384-dimensional dense semantic vector encoding</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Generative LLM SDK</strong></td>
+<td style="text-align:left">Google GenAI SDK</td>
+<td style="text-align:center"><code>2.22.0</code></td>
+<td style="text-align:left">Multi-model fallback reasoning (<code>gemini-3.5-flash-lite</code>, <code>gemini-3.5-flash</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 High-Level System Architecture</h3>
+<p>The application adheres to a decoupled client-server architecture with client-side edge computing for latency-critical computer vision tasks and server-side processing for dense vector retrieval, LLM synthesis, and relational persistence.</p>
+<pre><code>+---------------------------------------------------------------------------------------+
+|                                CLIENT TIER (BROWSER RUNTIME)                          |
+|                                                                                       |
+|  +--------------------+   +-----------------------+   +----------------------------+  |
+|  |  React UI Pages    |   |  MediaPipe Vision     |   |  Kinematic Engine          |  |
+|  |  (Tailwind + Vite) |   |  (Wasm / WebGL GPU)   |   |  (6 Exercise Analyzers)    |  |
+|  |  - Dashboard       |   |  - 33 Pose Landmarks  |   |  - Vector Joint Angles     |  |
+|  |  - Live Workout    |--&gt;|  - 30 FPS Stream      |--&gt;|  - Hysteresis State Machine|  |
+|  |  - Nutrition       |   |  - Local / CDN models |   |  - Anti-Bounce 900ms Filter|  |
+|  |  - AI Chatbot      |   +-----------------------+   |  - Web Speech TTS Audio    |  |
+|  +---------+----------+                               +--------------+-------------+  |
+|            |                                                         |                |
+|            | REST / JSON (JWT Authenticated)                         | Session Stats  |
++------------|---------------------------------------------------------|----------------+
+             |                                                         |
+             v                                                         v
++---------------------------------------------------------------------------------------+
+|                               BACKEND TIER (FASTAPI REST API)                         |
+|                                                                                       |
+|  +---------------------------------------------------------------------------------+  |
+|  |  FastAPI Router Middleware (CORS, JWT Bearer Auth, Lifespan Pre-warming)        |  |
+|  +---------------------------------------------------------------------------------+  |
+|       |                                                |                              |
+|       v                                                v                              |
+|  +------------------------+                       +--------------------------------+  |
+|  | Relational Services    |                       | RAG &amp; AI Reasoning Engine      |  |
+|  | - Auth (Bcrypt + JWT)  |                       | - SentenceTransformers Embed   |  |
+|  | - Workouts &amp; History   |                       | - FAISS Index (123 Chunks)     |  |
+|  | - Nutrition &amp; Targets  |                       | - Grounded Prompt Builder      |  |
+|  | - Admin Administration |                       | - Google GenAI Client (Gemini) |  |
+|  +-----------+------------+                       +---------------+----------------+  |
+|              |                                                    |                   |
++--------------|----------------------------------------------------|-------------------+
+               v                                                    v
++-------------------------------+                  +------------------------------------+
+| SQLite Relational DB          |                  | Peer-Reviewed Sports Science Corp. |
+| (fitness.db - 6 Tables)       |                  | - 123 Chunks / 35 Topics           |
+| - Users &amp; Health Profiles     |                  | - ACSM, BJSM, ISSN, WHO, CDC       |
+| - Workout Sessions &amp; Meals    |                  | - DOIs &amp; PMIDs                     |
++-------------------------------+                  +------------------------------------+
+</code></pre>
+<h3>2.3 Component Interaction and Data Flow Diagram</h3>
+<p>The sequence below illustrates how a user request traverses the system during a Live Workout and an AI Chatbot interaction:</p>
+<pre><code>Athlete                   React Client (Vite)              FastAPI Backend              FAISS / Gemini
+   |                              |                               |                           |
+   |--- 1. Start Workout --------&gt;|                               |                           |
+   |                              |--- 2. Load Wasm Model -------&gt;|                           |
+   |                              |    (MediaPipe PoseLandmarker) |                           |
+   |                              |&lt;-- 3. Model Initialized ------|                           |
+   |--- 4. Perform Movement -----&gt;|                               |                           |
+   |    (Webcam Video Frames)     |--- 5. Extract Landmarks (x,y) |                           |
+   |                              |--- 6. Calculate Joint Angles  |                           |
+   |                              |--- 7. State Machine Transition|                           |
+   |&lt;-- 8. Audio/Visual Cue ------|    (e.g., &quot;Hit Parallel!&quot;)    |                           |
+   |    (&quot;Good Depth, Lockout!&quot;)  |                               |                           |
+   |--- 9. Complete Session -----&gt;|                               |                           |
+   |                              |--- 10. POST /api/workouts ---&gt;|                           |
+   |                              |        (reps, accuracy, time) |--- 11. Write DB --------&gt; |
+   |                              |&lt;-- 12. Session Recorded ------|                           |
+   |                              |                               |                           |
+   |--- 13. Ask Fitness Query ---&gt;|                               |                           |
+   |    (&quot;Daily protein target?&quot;) |--- 14. POST /chat -----------&gt;|                           |
+   |                              |        (query + user profile) |--- 15. Embed (MiniLM) ---&gt;|
+   |                              |                               |--- 16. FAISS Top-K ------&gt;|
+   |                              |                               |&lt;-- 17. 123-Chunk Evidence-|
+   |                              |                               |--- 18. Prompt + Gemini --&gt;|
+   |                              |                               |&lt;-- 19. Grounded Answer ---|
+   |&lt;-- 20. Render Answer + Citations 21. HTTP 200 Return ---------|                           |
+</code></pre>
+<h3>2.4 Edge Computer Vision Pipeline Architecture</h3>
+<p>Running computer vision at the edge in the browser guarantees real-time responsiveness (&lt;33ms frame times for 30 FPS tracking) and complete privacy:</p>
+<ol>
+<li><strong>Video Capture:</strong> HTML5 <code>navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } })</code> pipes camera frames to a hidden HTML <code>&lt;video&gt;</code> element.</li>
+<li><strong>Local Model Resolution:</strong> The <code>getPoseLandmarker()</code> singleton initializes <code>@mediapipe/tasks-vision</code> by loading local Wasm binaries (<code>/wasm</code>) and model weights (<code>/models/pose_landmarker_lite.task</code>). If local files are inaccessible, it transparently falls back to Google's CDN.</li>
+<li><strong>Hardware Acceleration:</strong> The landmarker requests a WebGL <code>GPU</code> delegate. If unavailable, it degrades gracefully to multi-threaded CPU SIMD.</li>
+<li><strong>Landmark Extraction:</strong> Every frame yields 33 3D normalized coordinates $(x, y, z)$ with detection and visibility confidence metrics.</li>
+<li><strong>Canvas Overlay Rendering:</strong> Coordinates are drawn to an overlaid HTML5 <code>&lt;canvas&gt;</code> via <code>PoseCanvas.jsx</code>, highlighting skeletal segments with dynamic color states (green for compliant joints, amber for warning thresholds, red for form errors).</li>
+</ol>
+<h3>2.5 Evidence-Grounded RAG Subsystem Architecture</h3>
+<p>To eliminate LLM hallucinations:</p>
+<ol>
+<li><strong>Curated Scientific Corpus:</strong> 123 evidence passages extracted from peer-reviewed position stands (ACSM, BJSM, ISSN, WHO) covering 35 fitness and nutrition topics.</li>
+<li><strong>Vector Space Indexing:</strong> Texts are encoded via <code>all-MiniLM-L6-v2</code> into 384-dimensional normalized vectors and indexed via FAISS <code>IndexFlatIP</code> (inner product cosine similarity).</li>
+<li><strong>Retrieval Gating:</strong> User queries are vectorized at runtime (~17ms) and queried against FAISS (~0.2ms). Chunks scoring below a strict similarity threshold ($\text{score} &lt; 0.40$) are pruned.</li>
+<li><strong>Boundary-Constrained Prompting:</strong> The LLM prompt combines retrieved evidence, user biometrics, and 16 strict negative rules:
+<ul>
+<li>Must not invent statistics, studies, or quantitative numbers not explicitly present in the text.</li>
+<li>Must explicitly refuse medical diagnosis or pain management prescriptions.</li>
+<li>Must output formal citations including Author, Journal, Year, PMID, and DOI.</li>
+</ul>
+</li>
+<li><strong>Multi-Model Failover:</strong> The backend targets <code>gemini-3.5-flash-lite</code> (average latency 1.1s–2.8s), with automated instant failover to <code>gemini-3.5-flash</code> and <code>gemini-3.6-flash</code>.</li>
+</ol>
+<hr />
+<h2>3. INSTALLATION, CONFIGURATION, AND APPLICATION STARTUP</h2>
+<h3>3.1 Hardware and Environment Prerequisites</h3>
+<ul>
+<li><strong>Operating System:</strong> Windows 10/11, macOS 12+, or Ubuntu Linux 22.04 LTS.</li>
+<li><strong>Processor (CPU):</strong> Quad-Core x86_64 or Apple Silicon (M1/M2/M3).</li>
+<li><strong>RAM:</strong> Minimum 8 GB (16 GB recommended for running SentenceTransformers and Vite concurrently).</li>
+<li><strong>Camera Hardware:</strong> Standard integrated or external USB 720p/1080p webcam (or built-in simulation mode).</li>
+<li><strong>Software Runtimes:</strong>
+<ul>
+<li>Node.js: <code>v18.0.0</code> or higher (verified with Node <code>v20.x</code> / <code>v22.x</code>)</li>
+<li>Python: <code>3.10.x</code> to <code>3.13.x</code></li>
+<li>Package Managers: <code>npm</code> (Node) and <code>pip</code> (Python)</li>
+</ul>
+</li>
+</ul>
+<h3>3.2 Backend Setup and Dependency Installation</h3>
+<pre><code class="language-powershell"># 1. Navigate to the backend directory
+cd c:\Users\ajitk\.gemini\antigravity-ide\scratch\ai-fitness-coach\backend
+
+# 2. Create and activate a Python virtual environment
+python -m venv venv
+.\venv\Scripts\activate
+
+# 3. Install required Python packages
+pip install fastapi uvicorn sqlalchemy pydantic bcrypt pyjwt python-dotenv
+pip install faiss-cpu sentence-transformers torch google-genai tenacity requests
+</code></pre>
+<p>Create or verify the <code>backend/.env</code> file:</p>
+<pre><code class="language-env">GEMINI_API_KEY=your_actual_google_gemini_api_key_here
+JWT_SECRET=pulseai_super_secret_production_ready_jwt_signing_key_32bytes_long
+</code></pre>
+<h3>3.3 Evidence Vector Corpus Ingestion</h3>
+<p>Before running the server, build the FAISS vector index from the scientific evidence corpus:</p>
+<pre><code class="language-powershell"># Run ingest script from backend directory
+python ingest.py
+</code></pre>
+<p><em>Expected Output:</em></p>
+<pre><code>Indexed 123 evidence chunks.
+FAISS index: .../backend/index/fitness.index
+Metadata:    .../backend/index/documents.json
+</code></pre>
+<h3>3.4 Frontend Setup and Configuration</h3>
+<pre><code class="language-powershell"># Navigate to the project root directory
+cd c:\Users\ajitk\.gemini\antigravity-ide\scratch\ai-fitness-coach
+
+# Install Node dependencies
+npm install
+</code></pre>
+<h3>3.5 Launching Services and Port Verification</h3>
+<h4>Step 1: Launch FastAPI Backend Server</h4>
+<pre><code class="language-powershell">cd backend
+.\venv\Scripts\activate
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+</code></pre>
+<p><em>Verification Check:</em> Access <code>http://127.0.0.1:8000/</code> in your browser. It should return:</p>
+<pre><code class="language-json">{&quot;message&quot;: &quot;AI Fitness Coach API is running&quot;, &quot;database&quot;: &quot;active&quot;}
+</code></pre>
+<h4>Step 2: Launch Vite Frontend Dev Server</h4>
+<pre><code class="language-powershell"># In a separate terminal at project root:
+npm run dev
+</code></pre>
+<p><em>Verification Check:</em> Access <code>http://localhost:5173/</code> or <code>http://localhost:5174/</code> to view the landing page.</p>
+<hr />
+<h2>4. COMPLETE FEATURE DOCUMENTATION</h2>
+<h3>4.1 Secure Authentication and Role-Based Access Control</h3>
+<p>The application implements dual-role security (Athletes and Platform Administrators).</p>
+<ul>
+<li><strong>Password Hashing:</strong> Passwords are never stored in plaintext. They are salted and hashed using Bcrypt with 12 calculation rounds (<code>bcrypt.gensalt(rounds=12)</code>).</li>
+<li><strong>JWT Token Issuance:</strong> Upon successful credential validation, the server generates an HMAC-SHA256 JSON Web Token containing user ID, email, role, and a 7-day expiration timestamp (<code>ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7</code>).</li>
+<li><strong>Role Verification:</strong> Protected endpoints verify tokens using FastAPI's dependency injection (<code>get_current_user</code> and <code>require_admin</code>). Unauthorized requests trigger <code>HTTP 401 Unauthorized</code> or <code>HTTP 403 Forbidden</code>. Suspended accounts are immediately denied access.</li>
+</ul>
+<pre><code>
+&lt;div class=&quot;screenshot-container&quot;&gt;
+  &lt;div class=&quot;screenshot-placeholder&quot;&gt;
+    &lt;div class=&quot;camera-icon&quot;&gt;📷&lt;/div&gt;
+    &lt;div class=&quot;placeholder-title&quot;&gt;[SCREENSHOT 1: Login and Registration Page]&lt;/div&gt;
+    &lt;div class=&quot;placeholder-subtitle&quot;&gt;High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;screenshot-caption&quot;&gt;Figure 4.1 - Dual-Role Authentication and Registration Interface.&lt;/div&gt;
+  &lt;div class=&quot;screenshot-note&quot;&gt;&lt;strong&gt;Evaluation Note:&lt;/strong&gt; This screenshot should display the sleek dark-themed login interface featuring the athlete login form, quick-fill demo credentials, input validation states, and a toggle link to the administrator login view.
+```&lt;/div&gt;
+&lt;/div&gt;
+
+
+### 4.2 Biometric Onboarding and Athlete Health Profiling
+New athletes undergo a structured four-stage biometric profiling workflow that tailors their calorie calculations, training schedules, and RAG chatbot advice:
+1. **Biometrics &amp; Physical Stats:** Age, Gender, Height (cm), Weight (kg).
+2. **Fitness Ambitions:** Goals (Muscle Hypertrophy, Strength &amp; Power, Fat Loss &amp; Conditioning, Posture Correction &amp; Mobility) and Fitness Level (Beginner, Intermediate, Advanced).
+3. **Logistics &amp; Equipment:** Weekly Frequency (2 to 6 days/week) and Available Equipment (Bodyweight Only, Dumbbells &amp; Bands, Full Commercial Gym).
+4. **Injury &amp; Physical Limitations:** Chronic back, knee, shoulder, or neck pain records.
+
+Data is stored in the `health_profiles` SQLite table and injected into the system prompt during AI chat interactions to personalize recommendations within safe boundaries.
+
+### 4.3 Interactive Main Athlete Dashboard
+The athlete dashboard acts as the daily mission control:
+* **Metric Cards:** Visualizes current workout streak (days), total sessions completed, total reps accumulated, and average form accuracy score.
+* **Today's Workout Preview:** Displays scheduled exercises with set and rep targets, target muscle groups, and a direct &quot;Launch Live Workout&quot; action button.
+* **Quick Nutrition Progress:** Displays progress rings for daily calories, protein, carbohydrates, fat, and a quick-log meal button.
+* **AI Coach Recommendation:** Dynamic coaching advice reflecting the user's selected primary goal.
+
+</code></pre>
+<div class="screenshot-container">
+  <div class="screenshot-placeholder">
+    <div class="camera-icon">📷</div>
+    <div class="placeholder-title">[SCREENSHOT 2: Main Dashboard]</div>
+    <div class="placeholder-subtitle">High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)</div>
+  </div>
+  <div class="screenshot-caption">Figure 4.2 - Athlete Mission Control Dashboard.</div>
+  <div class="screenshot-note"><strong>Evaluation Note:</strong> This screenshot should capture the complete athlete dashboard, including streak counters, average form accuracy metrics, today's workout launch card, real-time nutrition macro rings, and active weekly schedule overview.
+```</div>
+</div>
+<h3>4.4 Live Workout Tracking and Computer Vision Feedback</h3>
+<p>The Live Workout interface transforms standard webcams into an interactive smart fitness mirror:</p>
+<ul>
+<li><strong>Pose Estimation Stream:</strong> Overlays a responsive HTML5 canvas on top of the live video stream, rendering the 33 MediaPipe pose landmarks and connecting skeletal vectors in real time.</li>
+<li><strong>Dual Operation Modes:</strong>
+<ul>
+<li><em>Webcam Mode:</em> Reads real-time video frames from the user's physical camera.</li>
+<li><em>Simulation Mode:</em> Provides a built-in mathematical kinematic landmark generator that cycles through lifelike rep trajectories, enabling automated testing and demonstration without camera hardware.</li>
+</ul>
+</li>
+<li><strong>FormFeedbackHUD:</strong> Displays real-time angle readouts, an arc gauge depicting proximity to target depth, repetition counters, set counters, and color-coded status badges (Green = Optimal, Amber = Warning, Red = Posture Error).</li>
+<li><strong>Text-to-Speech (TTS) Auditory Coach:</strong> Leverages the Web Speech Synthesis API (<code>window.speechSynthesis</code>) to provide spoken audio feedback during exercise execution (e.g., <em>&quot;Good depth, drive up!&quot;</em>, <em>&quot;Chest falling forward, stand tall!&quot;</em>). Spoken cues are debounced with a 2.8-second cooldown to avoid sensory overload.</li>
+<li><strong>Session Completion Celebration:</strong> Triggers canvas confetti upon completion of target sets and displays a detailed performance summary modal.</li>
+</ul>
+<pre><code>
+&lt;div class=&quot;screenshot-container&quot;&gt;
+  &lt;div class=&quot;screenshot-placeholder&quot;&gt;
+    &lt;div class=&quot;camera-icon&quot;&gt;📷&lt;/div&gt;
+    &lt;div class=&quot;placeholder-title&quot;&gt;[SCREENSHOT 4: Live Workout and Pose Detection]&lt;/div&gt;
+    &lt;div class=&quot;placeholder-subtitle&quot;&gt;High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;screenshot-caption&quot;&gt;Figure 4.3 - Live Workout Screen with MediaPipe Pose Estimation Overlay.&lt;/div&gt;
+  &lt;div class=&quot;screenshot-note&quot;&gt;&lt;strong&gt;Evaluation Note:&lt;/strong&gt; This screenshot should illustrate the live camera view with the overlaid skeletal tracking lines, real-time joint landmark coordinates, target angle arc, and camera toggle controls.
+```&lt;/div&gt;
+&lt;/div&gt;
+
+
+### 4.5 Biomechanical Kinematic Analyzers (All Six Exercises)
+The system features six specialized analyzer classes in `src/services/squatAnalyzer.js` managed by a unified `ExerciseAnalyzer` facade:
+
+</code></pre>
+<div class="screenshot-container">
+  <div class="screenshot-placeholder">
+    <div class="camera-icon">📷</div>
+    <div class="placeholder-title">[SCREENSHOT 5: Exercise Analysis and Rep Counter]</div>
+    <div class="placeholder-subtitle">High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)</div>
+  </div>
+  <div class="screenshot-caption">Figure 4.4 - Real-Time Biomechanical Rep Counter and HUD Feedback.</div>
+  <div class="screenshot-note"><strong>Evaluation Note:</strong> This screenshot should capture the FormFeedbackHUD during an active repetition, showing the real-time angle readout gauge, current rep count, set progress, and dynamic form correction cues.
+```</div>
+</div>
+<h4>1. Barbell Deep Squat (<code>SquatAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Hip Flexion ($\angle \text{Shoulder-Hip-Knee}$) and Knee Flexion ($\angle \text{Hip-Knee-Ankle}$).</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Standing Lockout: Knee angle $\ge 148^\circ$.</li>
+<li>Descent Initiation: Knee angle drops $&lt; 130^\circ$.</li>
+<li>Target Parallel Depth: Knee angle must reach $\le 100^\circ$ (hip crease below patella).</li>
+<li>Ascent Phase: Knee angle opens back past $&gt; 115^\circ$.</li>
+<li>Full Rep Completion: Returns to lockout $\ge 148^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong> Flags excessive forward torso lean if hip angle drops below $50^\circ$ before parallel depth is achieved.</li>
+</ul>
+<h4>2. Chest Push-Up (<code>PushupAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Bilateral Elbow Flexion ($\angle \text{Shoulder-Elbow-Wrist}$) and Spine Alignment.</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Top Lockout: Elbow angle $\ge 150^\circ$ in straight-arm plank.</li>
+<li>Descent Phase: Elbow angle drops $&lt; 130^\circ$.</li>
+<li>Bottom Depth: Elbow angle must reach $\le 90^\circ$ (chest approximately 2 inches above the floor).</li>
+<li>Lockout Return: Elbow returns to $\ge 150^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong> Flags incomplete chest descent and flared elbows.</li>
+</ul>
+<h4>3. Romanian Deadlift (<code>DeadliftAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Hip Hinge Angle ($\angle \text{Shoulder-Hip-Knee}$) and Knee Soft-Bend ($\angle \text{Hip-Knee-Ankle}$).</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Upright Stand: Hip angle $\ge 150^\circ$.</li>
+<li>Hinge Initiation: Hip angle drops $&lt; 135^\circ$ while maintaining knee angle $&gt; 115^\circ$.</li>
+<li>Posterior Chain Target Depth: Hip angle reaches $\le 75^\circ$ with bar near mid-shin.</li>
+<li>Standing Lockout: Hips drive forward to $\ge 150^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong> If the knee angle drops below $115^\circ$ during hinging, the system triggers the corrective cue: <em>&quot;Hinge at your hips, don't squat the deadlift!&quot;</em>.</li>
+</ul>
+<h4>4. Dumbbell Bicep Curl (<code>CurlAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Elbow Flexion ($\angle \text{Shoulder-Elbow-Wrist}$).</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Full Extension: Elbow angle $\ge 140^\circ$.</li>
+<li>Flexion Phase: Elbow angle flexes upward past $&lt; 110^\circ$.</li>
+<li>Peak Contraction: Elbow angle reaches $\le 60^\circ$ (bicep fully contracted).</li>
+<li>Eccentric Lowering: Elbow extends back past $&gt; 140^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong> Rejects swinging momentum and incomplete eccentric extension.</li>
+</ul>
+<h4>5. Forward Walking Lunge (<code>LungeAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Lead Knee Angle ($\angle \text{Hip-Knee-Ankle}$) and Torso Upright Angle ($\angle \text{Shoulder-Hip-Knee}$).</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Upright Stance: Knee angle $\ge 155^\circ$.</li>
+<li>Stride Descent: Knee angle drops $&lt; 135^\circ$.</li>
+<li>Bottom Depth: Knee angle reaches $\le 95^\circ$ (lead thigh parallel to ground).</li>
+<li>Ascent: Drive back to standing lockout $\ge 155^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong> Flags forward torso collapse if hip angle drops below $65^\circ$.</li>
+</ul>
+<h4>6. Isometric Core Plank (<code>PlankAnalyzer</code>)</h4>
+<ul>
+<li><strong>Monitored Joints:</strong> Total Body Line ($\angle \text{Shoulder-Hip-Ankle}$).</li>
+<li><strong>Biomechanical Criteria:</strong>
+<ul>
+<li>Active Holding Alignment: Straight neutral spine between $160^\circ$ and $195^\circ$.</li>
+<li>Second-by-Second Accumulation: Cumulative seconds held in good form are incremented.</li>
+</ul>
+</li>
+<li><strong>Form Error Detection:</strong>
+<ul>
+<li><em>Hip Sagging:</em> Angle drops $&lt; 160^\circ$ with hip below shoulder-ankle vector (triggers <em>&quot;Lift your hips to protect lower back!&quot;</em>).</li>
+<li><em>Hip Piking:</em> Angle drops $&lt; 160^\circ$ with hips piked upward (triggers <em>&quot;Lower your hips into a straight plank!&quot;</em>).</li>
+<li>The hold timer pauses immediately when sagging or piking occurs, resuming only when alignment is restored.</li>
+</ul>
+</li>
+</ul>
+<h3>4.6 Multi-Stage State Machine and Anti-Bounce Repetition Filtering</h3>
+<p>To prevent false counts caused by sensor noise, webcam frame drops, or rapid bouncing:</p>
+<ol>
+<li><strong>Exponential Moving Average (EMA) Smoothing:</strong> Raw calculated joint angles are smoothed across consecutive frames using $\theta_{\text{smoothed}} = \alpha \cdot \theta_{\text{raw}} + (1 - \alpha) \cdot \theta_{\text{prev}}$ with $\alpha = 0.40$.</li>
+<li><strong>Deterministic State Machine:</strong> A repetition cannot increment by jumping directly from standing to lockout; it must transition through <code>STANDING</code> $\rightarrow$ <code>DESCENDING</code> $\rightarrow$ <code>BOTTOM</code> $\rightarrow$ <code>ASCENDING</code> $\rightarrow$ <code>STANDING</code>.</li>
+<li><strong>Mandatory Parallel Depth Gating:</strong> If the user descends and ascends without hitting target depth ($\le 100^\circ$ for squats), the state machine registers an <code>incompleteRep</code>, issues the warning <em>&quot;Partial rep detected. Descend deeper!&quot;</em>, and refuses to increment the rep counter.</li>
+<li><strong>Human Tempo / Anti-Bounce Duration Filter:</strong> Real human compound repetitions require at least 900ms to complete. If a rep cycle finishes in under 900ms, it is classified as a sensor spike or bouncing glitch and rejected (<code>minRepDurationMs: 900</code>).</li>
+<li><strong>Consecutive Rep Cooldown:</strong> A minimum lockout pause of 800ms (<code>minTimeBetweenRepsMs: 800</code>) is enforced between reps.</li>
+<li><strong>Objective Form Scoring:</strong> Repetitions are scored from 0 to 100% based on depth proximity and posture maintenance. The workout average form score is calculated across all valid reps upon session completion.</li>
+</ol>
+<h3>4.7 Evidence-Grounded AI Fitness Chatbot (RAG System)</h3>
+<p>The conversational coaching assistant is located on the <code>/chat</code> route and accessible via a global slide-out drawer:</p>
+<ul>
+<li><strong>Dynamic Query Status Feedback:</strong> Notifies the user in real time as the request progresses (<code>&quot;Searching fitness evidence...&quot;</code> $\rightarrow$ <code>&quot;Generating evidence-grounded answer...&quot;</code>).</li>
+<li><strong>Client-Side Timeout Safeguard:</strong> An <code>AbortController</code> enforces a 35-second hard ceiling, preventing UI freezing during network hiccups.</li>
+<li><strong>Full Citation Attribution:</strong> Answers cite published literature with authoring body, publication year, title, PubMed ID (PMID), and Digital Object Identifier (DOI).</li>
+<li><strong>Negative Safety Guardrails:</strong> Adheres to 16 strict clinical and safety boundaries, refusing to prescribe rehabilitation for injuries or guess numbers missing from the retrieved evidence.</li>
+</ul>
+<pre><code>
+&lt;div class=&quot;screenshot-container&quot;&gt;
+  &lt;div class=&quot;screenshot-placeholder&quot;&gt;
+    &lt;div class=&quot;camera-icon&quot;&gt;📷&lt;/div&gt;
+    &lt;div class=&quot;placeholder-title&quot;&gt;[SCREENSHOT 3: AI Fitness Chatbot Response]&lt;/div&gt;
+    &lt;div class=&quot;placeholder-subtitle&quot;&gt;High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;screenshot-caption&quot;&gt;Figure 4.5 - Evidence-Grounded AI Chatbot Response with Scientific Citations.&lt;/div&gt;
+  &lt;div class=&quot;screenshot-note&quot;&gt;&lt;strong&gt;Evaluation Note:&lt;/strong&gt; This screenshot should show the AI Coach chat conversation responding to an evidence-backed inquiry (e.g., progressive overload principles), displaying the structured answer, bulleted guidelines, and formal literature citations (ACSM/BJSM).
+```&lt;/div&gt;
+&lt;/div&gt;
+
+
+### 4.8 Scientific Nutrition, Water, and Diet Management
+The nutrition tracking engine (`/nutrition`) provides evidence-aligned dietary control:
+* **Caloric and Macronutrient Breakdown:** Visual progress bars track current consumption against daily targets for Calories (kcal), Protein (g), Carbohydrates (g), and Dietary Fat (g).
+* **Four Daily Meal Slots + Custom Entries:** Dedicated slots for Breakfast (08:00 AM), Lunch (01:00 PM), Afternoon Fuel (04:30 PM), and Dinner (08:00 PM), plus arbitrary custom meal logging.
+* **Hydration Tracker:** Incremental water counter logging consumption in 250ml glasses against a personalized target (default 10 glasses = 2.5 Liters).
+* **Dietary Preferences:** Allows toggling between five nutritional paradigms (High Protein, Balanced, Ketogenic, Plant-Based / Vegan, Paleo) which automatically adjust target macro ratios.
+* **One-Click Evidence Sample Plan:** Populates the user's day with scientifically balanced meals (e.g., *Power Oats with Whey*, *Grilled Chicken &amp; Quinoa Bowl*, *Pan-Seared Salmon &amp; Sweet Potato*).
+* **Single-Day Reset:** Clears logs for the selected calendar date without altering historical records.
+
+</code></pre>
+<div class="screenshot-container">
+  <div class="screenshot-placeholder">
+    <div class="camera-icon">📷</div>
+    <div class="placeholder-title">[SCREENSHOT 7: Nutrition Tracking Page]</div>
+    <div class="placeholder-subtitle">High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)</div>
+  </div>
+  <div class="screenshot-caption">Figure 4.6 - Daily Nutrition, Macronutrient, and Hydration Dashboard.</div>
+  <div class="screenshot-note"><strong>Evaluation Note:</strong> This screenshot should capture the complete nutrition interface, including macro target progress bars, water intake counter, configured meal slots with nutritional totals, and the diet preference selector.
+```</div>
+</div>
+<h3>4.9 Workout History, Progression Analytics, and Benchmarks</h3>
+<p>The analytics suite (<code>/analytics</code>) transforms raw workout telemetry into actionable insights:</p>
+<ul>
+<li><strong>Interactive Form Accuracy Trend:</strong> A Chart.js linear plot tracking the user's form accuracy score percentage across recent workout sessions.</li>
+<li><strong>Repetition Volume Distribution:</strong> A doughnut chart illustrating the proportion of total reps completed across different exercises (Squats, Push-ups, Deadlifts, Curls, Lunges, Planks).</li>
+<li><strong>Weekly Frequency Adherence:</strong> A grouped bar chart comparing actual completed workouts against the target weekly workout frequency.</li>
+<li><strong>Personal Benchmark Vault:</strong> Enables logging and tracking personal records for key strength milestones (e.g., 1RM Squat, Max Consecutive Push-ups, Longest Plank Hold).</li>
+</ul>
+<pre><code>
+&lt;div class=&quot;screenshot-container&quot;&gt;
+  &lt;div class=&quot;screenshot-placeholder&quot;&gt;
+    &lt;div class=&quot;camera-icon&quot;&gt;📷&lt;/div&gt;
+    &lt;div class=&quot;placeholder-title&quot;&gt;[SCREENSHOT 6: Workout History and Analytics]&lt;/div&gt;
+    &lt;div class=&quot;placeholder-subtitle&quot;&gt;High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;screenshot-caption&quot;&gt;Figure 4.7 - Performance Analytics, Form Trends, and Benchmark Vault.&lt;/div&gt;
+  &lt;div class=&quot;screenshot-note&quot;&gt;&lt;strong&gt;Evaluation Note:&lt;/strong&gt; This screenshot should illustrate the analytics page with the interactive Chart.js form accuracy trend line, exercise rep distribution chart, weekly training volume adherence, and personal benchmark cards.
+```&lt;/div&gt;
+&lt;/div&gt;
+
+
+### 4.10 Platform Administration, Diagnostics, and Audit Logs
+The administrative suite (`/admin`) provides full platform governance:
+* **Staff Overview (`/admin`):** Summarizes active registered athletes, suspended accounts, aggregate workouts completed, and total meals logged.
+* **Hardware &amp; Subsystem Diagnostics:** Live diagnostic cards verifying the operational status of the Webcam Stream Engine, Joint Kinematic Analyzer, AI Biometric RAG Service, and SQLite Relational Database Engine.
+* **Athlete User Management (`/admin/users`):** Search, filter, and inspect registered users. Administrators can toggle account status between `Active` and `Suspended` with a single click (with safeguards against admin self-suspension) or create new athlete accounts directly.
+* **Real-Time Audit Activity Feed (`/admin/activity`):** Unified chronological event stream recording workout completions (with rep counts and accuracy scores) and new user registrations.
+
+</code></pre>
+<div class="screenshot-container">
+  <div class="screenshot-placeholder">
+    <div class="camera-icon">📷</div>
+    <div class="placeholder-title">[SCREENSHOT 8: Admin Dashboard]</div>
+    <div class="placeholder-subtitle">High-Resolution Web Interface Capture Area (16:9 Aspect Ratio)</div>
+  </div>
+  <div class="screenshot-caption">Figure 4.8 - Platform Administrative Console and System Diagnostics.</div>
+  <div class="screenshot-note"><strong>Evaluation Note:</strong> This screenshot should display the administrator overview, showing aggregate athlete metrics, hardware subsystem diagnostic indicators, user moderation controls, and the real-time activity log feed.
+```</div>
+</div>
+<hr />
+<h2>5. STEP-BY-STEP WORKFLOWS AND PROCEDURAL SPECIFICATIONS</h2>
+<h3>5.1 User Registration and Authentication Workflow</h3>
+<pre><code>[USER] Enter Name, Email, Password -&gt; [FRONTEND] Form Validation -&gt; [BACKEND] Bcrypt Hash -&gt; [DATABASE] Insert User -&gt; [BACKEND] Generate JWT -&gt; [FRONTEND] Store Token -&gt; [DASHBOARD]
+</code></pre>
+<ol>
+<li><strong>User Action:</strong> The visitor navigates to <code>/signup</code>, enters their full name, email address, and desired password, and clicks <strong>&quot;Create Account&quot;</strong>.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>[<code>SignupPage.jsx</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/pages/auth/SignupPage.jsx) intercepts form submission, trims whitespace, verifies that the password is at least 6 characters long, and sets a loading spinner.</li>
+<li>Dispatches a <code>POST</code> request to <code>http://127.0.0.1:8000/api/auth/signup</code> with payload <code>{&quot;name&quot;: &quot;...&quot;, &quot;email&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot;}</code> via [<code>api.js</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/services/api.js).</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>[<code>main.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/main.py) receives payload in the <code>signup()</code> endpoint.</li>
+<li>Normalizes email to lowercase and queries <code>users</code> table via SQLAlchemy to ensure uniqueness. If taken, raises <code>HTTP 400 Bad Request</code>.</li>
+<li>Calls <code>hash_password(password)</code> in [<code>auth.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/auth.py), executing Bcrypt hashing with 12 salt rounds.</li>
+<li>Inserts new <code>models.User</code> record with <code>role=&quot;user&quot;</code> and <code>status=&quot;Active&quot;</code>.</li>
+<li>Generates an HMAC-SHA256 JWT access token via <code>create_access_token()</code>.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Server returns <code>HTTP 200 OK</code> with JSON: <code>{&quot;user&quot;: {...}, &quot;access_token&quot;: &quot;...&quot;, &quot;token_type&quot;: &quot;bearer&quot;}</code>.</li>
+<li>Frontend stores <code>access_token</code> in <code>localStorage</code> under key <code>ai_fitness_token</code>, updates <code>AuthContext</code>, and redirects the user to <code>/onboarding</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>5.2 User Onboarding and Health Profile Generation</h3>
+<ol>
+<li><strong>User Action:</strong> The newly registered athlete completes the 4-step wizard at <code>/onboarding</code>: selecting age, gender, height, weight, primary fitness goal, workout frequency, equipment, and injuries, then clicks <strong>&quot;Complete Profile&quot;</strong>.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>[<code>OnboardingPage.jsx</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/pages/OnboardingPage.jsx) validates numeric ranges (age $&gt;10$, height $&gt;80\text{cm}$, weight $&gt;30\text{kg}$).</li>
+<li>Dispatches authenticated <code>POST</code> request to <code>/api/onboarding/profile</code> with Bearer token header.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li><code>save_profile()</code> endpoint in [<code>main.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/main.py) decodes JWT to retrieve <code>current_user.id</code>.</li>
+<li>Queries <code>health_profiles</code> table for an existing record; if absent, instantiates <code>models.HealthProfile(user_id=current_user.id)</code>.</li>
+<li>Maps payload fields (<code>age</code>, <code>gender</code>, <code>height_cm</code>, <code>weight_kg</code>, <code>fitness_level</code>, <code>goal</code>, <code>workout_frequency</code>, <code>equipment</code>, <code>injuries</code>) and commits transaction.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Server returns updated profile dictionary.</li>
+<li>Frontend redirects athlete to <code>/dashboard</code>, where metric cards and recommendations immediately reflect the new biometric profile.</li>
+</ul>
+</li>
+</ol>
+<h3>5.3 Live Workout Pose Detection and Real-Time Tracking Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete navigates to <code>/workout/live?exercise=ex-1</code> and clicks <strong>&quot;Start Camera&quot;</strong>.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>Requests camera access via <code>navigator.mediaDevices.getUserMedia({ video: true })</code>.</li>
+<li>Binds the returned <code>MediaStream</code> to the hidden <code>&lt;video ref={videoRef}&gt;</code> element.</li>
+<li>Calls <code>getPoseLandmarker()</code> from [<code>poseDetection.js</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/services/poseDetection.js), initializing Wasm and WebGL GPU pipelines.</li>
+<li>Establishes a <code>requestAnimationFrame</code> loop that reads <code>videoRef.current</code> and calls <code>landmarker.detectForVideo(video, timestamp)</code>.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>This phase executes entirely client-side at 30 FPS. Zero video frames are transmitted to the backend, preserving bandwidth and biometric privacy.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>The video stream appears with the 33 skeletal landmarks and connections drawn in real time on the overlay canvas via <code>PoseCanvas.jsx</code>.</li>
+<li>The HUD displays the detected joint angles and prompts the athlete to begin their first set.</li>
+</ul>
+</li>
+</ol>
+<h3>5.4 Barbell Deep Squat Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete stands in frame, descends into a full deep squat, and returns to a standing position.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>SquatAnalyzer.processFrame(landmarks, timestamp)</code> extracts Hip, Knee, and Ankle landmarks for left and right body sides.</li>
+<li>Computes left and right knee flexion angles using the 2D vector dot product formula:
+$$\theta = \arccos\left(\frac{\vec{BA} \cdot \vec{BC}}{|\vec{BA}| |\vec{BC}|}\right) \times \frac{180}{\pi}$$</li>
+<li>Compares visibility confidence between left and right sides, applying a hysteresis bias to prevent jittering between sides.</li>
+<li>Passes the raw knee angle through the Exponential Moving Average filter ($\alpha = 0.40$).</li>
+<li><strong>State Machine Progression:</strong>
+<ul>
+<li><code>STANDING</code>: Smoothed knee angle $\ge 148^\circ$.</li>
+<li><code>DESCENDING</code>: Knee angle drops below $130^\circ$. Sets <code>repStartTime</code>.</li>
+<li><code>BOTTOM</code>: Knee angle reaches $\le 100^\circ$. Sets <code>hasReachedDepth = true</code>.</li>
+<li><code>ASCENDING</code>: Knee angle rebounds past $&gt; 115^\circ$.</li>
+<li><code>LOCKOUT</code>: Knee angle returns to $\ge 148^\circ$.</li>
+</ul>
+</li>
+<li><strong>Form Verification &amp; Gating:</strong>
+<ul>
+<li>Verifies <code>hasReachedDepth === true</code>.</li>
+<li>Verifies <code>repDuration &gt;= 900ms</code> and lockout pause $\ge 800\text{ms}$.</li>
+<li>Checks torso lean: if hip angle drops $&lt;50^\circ$, deducts form points and triggers spoken warning: <em>&quot;Keep chest tall!&quot;</em>.</li>
+</ul>
+</li>
+<li>Increments <code>repCount</code> from 0 to 1, calculates rep form score (e.g., 95%), and plays audio cue: <em>&quot;Good depth, lockout!&quot;</em>.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Metrics remain in browser state until the athlete clicks <strong>&quot;Finish Workout&quot;</strong>.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Rep counter displays <code>1</code>, progress bar advances, FormFeedbackHUD pulses green, and the athlete receives immediate spoken encouragement.</li>
+</ul>
+</li>
+</ol>
+<h3>5.5 Chest Push-Up Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete assumes a horizontal plank position, lowers their chest towards the ground until elbows bend past $90^\circ$, and presses back up to full arm extension.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>PushupAnalyzer</code> calculates bilateral elbow angles ($\angle \text{Shoulder-Elbow-Wrist}$).</li>
+<li>Verifies starting lockout at $&gt; 150^\circ$.</li>
+<li>Tracks descent through $&lt; 130^\circ$ down to $\le 90^\circ$ for valid bottom depth.</li>
+<li>Confirms return to lockout $&gt; 150^\circ$.</li>
+<li>Rejects shallow half-reps where elbow flexion fails to reach $90^\circ$.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Client-side execution; stats accumulated in local component state.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Rep counter increments upon complete lockout; HUD displays <em>&quot;Optimal push-up depth reached&quot;</em>.</li>
+</ul>
+</li>
+</ol>
+<h3>5.6 Romanian Deadlift Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete faces the side camera, pushes their hips backward into a hip hinge with soft knees, lowers the load past the knees, and drives hips forward to standing.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>DeadliftAnalyzer</code> computes Hip Angle ($\angle \text{Shoulder-Hip-Knee}$) and Knee Angle ($\angle \text{Hip-Knee-Ankle}$).</li>
+<li>Verifies upright stance at hip $\ge 150^\circ$.</li>
+<li>Monitors hinging descent as hips flex below $135^\circ$ toward target depth of $\le 75^\circ$.</li>
+<li><strong>Biomechanical Discrimination:</strong> Ensures knee angle remains $&gt; 115^\circ$. If the user bends their knees below $115^\circ$, the system detects a squatting error and issues the warning: <em>&quot;Hinge at your hips, don't squat the deadlift!&quot;</em>.</li>
+<li>Confirms return to standing lockout ($\ge 150^\circ$).</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Local state aggregation.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Increments deadlift count only when posterior chain hip hinging is executed without squatting.</li>
+</ul>
+</li>
+</ol>
+<h3>5.7 Dumbbell Bicep Curl Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete stands tall with elbows pinned at sides, curls weights upward toward shoulders, and lowers under control.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>CurlAnalyzer</code> tracks elbow angle ($\angle \text{Shoulder-Elbow-Wrist}$).</li>
+<li>Checks starting arm extension $&gt; 140^\circ$.</li>
+<li>Tracks concentric curling motion until reaching peak contraction $\le 60^\circ$.</li>
+<li>Enforces full eccentric extension back past $&gt; 140^\circ$ before counting the rep.</li>
+<li>Detects swinging momentum and penalizes form accuracy.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Local client execution.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>HUD updates with rep count and prompts: <em>&quot;Full squeeze at top, controlled lowering&quot;</em>.</li>
+</ul>
+</li>
+</ol>
+<h3>5.8 Forward Walking Lunge Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete steps forward into a deep lunge, lowering the trailing knee toward the floor, and drives through the front heel to return to standing.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>LungeAnalyzer</code> monitors lead knee flexion ($\angle \text{Hip-Knee-Ankle}$) and torso lean ($\angle \text{Shoulder-Hip-Knee}$).</li>
+<li>Confirms standing position $\ge 155^\circ$.</li>
+<li>Tracks descent to bottom depth $\le 95^\circ$ (90-degree knee bend).</li>
+<li>Monitors torso angle: if hip flexion drops below $65^\circ$, flags torso collapse onto the thigh and speaks: <em>&quot;Keep your torso upright during the lunge!&quot;</em>.</li>
+<li>Confirms ascent back to standing $\ge 155^\circ$.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Local client execution.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Rep counter increments with form score reflecting posture maintenance.</li>
+</ul>
+</li>
+</ol>
+<h3>5.9 Isometric Core Plank Kinematic Analysis Workflow</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete holds a forearm or high plank position with a rigid, neutral spine.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li><code>PlankAnalyzer</code> tracks spine-hip alignment ($\angle \text{Shoulder-Hip-Ankle}$).</li>
+<li>Validates alignment within the healthy hold zone: $160^\circ \le \theta \le 195^\circ$.</li>
+<li>Uses frame timestamp deltas to increment <code>repCount</code> (accumulated seconds held in valid posture).</li>
+<li>If hips sag below $160^\circ$ with low hips, switches state to <code>SAGGING</code>, pauses timer, and speaks: <em>&quot;Lift your hips to protect lower back!&quot;</em>.</li>
+<li>If hips pike above $160^\circ$ with high hips, switches state to <code>PIKING</code>, pauses timer, and speaks: <em>&quot;Lower your hips into a straight plank!&quot;</em>.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Local client execution.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Timer counts up second-by-second only while posture is correct; pauses during form breakdowns.</li>
+</ul>
+</li>
+</ol>
+<h3>5.10 Evidence-Grounded AI Chatbot Query and RAG Processing</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete opens <code>/chat</code> and types: <em>&quot;What is progressive overload, and how can I apply it to my strength training?&quot;</em>.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>[<code>ChatAssistantPage.jsx</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/pages/ChatAssistantPage.jsx) appends user message to UI state, displays thinking status: <code>&quot;Searching fitness evidence...&quot;</code>.</li>
+<li>Sends <code>POST</code> request to <code>http://127.0.0.1:8000/chat</code> with body <code>{&quot;message&quot;: &quot;...&quot;, &quot;profile&quot;: {...}}</code>.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>[<code>main.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/main.py) enters <code>/chat</code> endpoint and calls <code>ask_rag()</code> in [<code>rag.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/rag.py).</li>
+<li><code>retrieve()</code> passes query to SentenceTransformers <code>all-MiniLM-L6-v2</code>, producing a 384-dimensional normalized vector (17.07ms).</li>
+<li>FAISS searches the 123-vector index using inner product cosine similarity (0.22ms), retrieving the top candidate chunks.</li>
+<li>De-duplicates chunks originating from the same evidence study and filters out chunks below similarity threshold $0.40$.</li>
+<li>Constructs grounded prompt embedding retrieved evidence texts, user health profile, and 16 strict negative guidelines.</li>
+<li>Calls <code>gemini-3.5-flash-lite</code> via Google GenAI SDK with an 18-second timeout.</li>
+<li>Formats formal citations including Organization, Year, Title, PMID, and DOI.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Server returns JSON: <code>{&quot;answer&quot;: &quot;### What is Progressive Overload?...&quot;, &quot;timings&quot;: {&quot;embed_ms&quot;: 17.07, &quot;faiss_ms&quot;: 0.22, &quot;gemini_ms&quot;: 2870.63, &quot;total_ms&quot;: 2890.27}, &quot;sources&quot;: [...]}</code>.</li>
+<li>Frontend renders formatted markdown answer and citation list within 2.91 seconds total roundtrip time.</li>
+</ul>
+</li>
+</ol>
+<h3>5.11 Nutrition Logging, Target Adjustment, and Hydration Tracking</h3>
+<ol>
+<li><strong>User Action:</strong> The athlete views <code>/nutrition</code>, clicks <strong>&quot;Log Meal&quot;</strong> on the Lunch slot, enters <em>&quot;Grilled Chicken Salad&quot;</em> (450 kcal, 42g protein, 20g carbs, 14g fat), clicks <strong>&quot;Save Meal&quot;</strong>, and taps the <strong>&quot;+&quot;</strong> button on the water tracker twice.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>Sends <code>POST</code> to <code>/api/nutrition/meal</code> with payload <code>{&quot;slotId&quot;: &quot;slot-lunch&quot;, &quot;name&quot;: &quot;Grilled Chicken Salad&quot;, &quot;calories&quot;: 450, &quot;protein&quot;: 42, &quot;carbs&quot;: 20, &quot;fat&quot;: 14, &quot;date&quot;: &quot;2026-10-26&quot;}</code>.</li>
+<li>Sends <code>POST</code> to <code>/api/nutrition/water</code> with payload <code>{&quot;glasses&quot;: 6, &quot;date&quot;: &quot;2026-10-26&quot;}</code>.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Validates that calorie and macro values are non-negative.</li>
+<li>Queries <code>meal_logs</code> for existing entry in <code>slot-lunch</code> on that date; updates entry or inserts new row.</li>
+<li><code>get_or_create_daily_nutrition()</code> retrieves or creates the date's <code>daily_nutrition</code> record and updates <code>water_glasses = 6</code>.</li>
+<li>Computes daily totals and macro percentages.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Server returns updated daily summary.</li>
+<li>Progress bars recalculate dynamically, showing current intake vs. daily targets.</li>
+</ul>
+</li>
+</ol>
+<h3>5.12 Platform Administration, User Moderation, and Diagnostics</h3>
+<ol>
+<li><strong>User Action:</strong> An administrator logs in at <code>/admin/login</code>, navigates to <code>/admin/users</code>, searches for an athlete, and clicks <strong>&quot;Suspend Account&quot;</strong>.</li>
+<li><strong>Frontend Processing:</strong>
+<ul>
+<li>[<code>AdminUsersPage.jsx</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/src/pages/admin/AdminUsersPage.jsx) dispatches authenticated <code>POST</code> to <code>/api/admin/users/usr-5/status</code> with payload <code>{&quot;status&quot;: &quot;Suspended&quot;}</code> using admin JWT token.</li>
+</ul>
+</li>
+<li><strong>Backend Processing:</strong>
+<ul>
+<li>Verifies admin role via <code>require_admin</code> dependency.</li>
+<li>Ensures target user is not the requesting admin (prevents accidental self-lockout).</li>
+<li>Updates <code>target_user.status = &quot;Suspended&quot;</code> in <code>users</code> table and commits.</li>
+</ul>
+</li>
+<li><strong>Resulting Output:</strong>
+<ul>
+<li>Server returns updated user record.</li>
+<li>Frontend changes badge to red <code>Suspended</code>.</li>
+<li>The targeted athlete's active session is invalidated; subsequent API requests by that user return <code>HTTP 403 Forbidden</code>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>6. BACKEND APIS, DATABASE MODELS, AND PROJECT FILE STRUCTURE</h2>
+<h3>6.1 Database Architecture and Entity Relationship Model</h3>
+<p>The database is managed via SQLite (<code>backend/fitness.db</code>) through SQLAlchemy ORM with cascade deletions enabled.</p>
+<pre><code>+-----------------------------------+          +-----------------------------------+
+|               users               |          |          health_profiles          |
++-----------------------------------+          +-----------------------------------+
+| id (PK, Integer)                  |&lt;--------&gt;| id (PK, Integer)                  |
+| name (String 100)                 |  1    1  | user_id (FK -&gt; users.id, Unique)  |
+| email (String 150, Unique, Index) |          | age (Integer)                     |
+| hashed_password (String 255)      |          | gender (String 20)                |
+| role (String 20: user | admin)    |          | height_cm (Float)                 |
+| avatar (String 255)               |          | weight_kg (Float)                 |
+| status (String 20: Active | Susp.)|          | fitness_level (String 50)         |
+| created_at (DateTime UTC)         |          | goal (String 100)                 |
++-----------------+-----------------+          | workout_frequency (Integer)       |
+                  |                            | equipment (String 100)            |
+                  | 1                          | injuries (String 200)             |
+                  |                            | updated_at (DateTime UTC)         |
+                  | *                          +-----------------------------------+
++-----------------+-----------------+
+|         workout_sessions          |          +-----------------------------------+
++-----------------------------------+          |             meal_logs             |
+| id (PK, Integer)                  |          +-----------------------------------+
+| user_id (FK -&gt; users.id, Index)   |          | id (PK, Integer)                  |
+| exercise_name (String 100)        |          | user_id (FK -&gt; users.id, Index)   |
+| reps (Integer)                    |          | slot_id (String 50, Nullable)     |
+| sets (Integer)                    |          | category (String 50)              |
+| duration_seconds (Integer)        |          | name (String 100)                 |
+| accuracy (Float)                  |          | calories (Float)                  |
+| calories (Float)                  |          | protein (Float)                   |
+| created_at (DateTime UTC)         |          | carbs (Float)                     |
++-----------------------------------+          | fat (Float)                       |
+                                               | prep_time (String 50)             |
++-----------------------------------+          | instructions (Text)               |
+|          daily_nutrition          |          | image_note (String 255)           |
++-----------------------------------+          | date (String 10: YYYY-MM-DD, Idx) |
+| id (PK, Integer)                  |          | created_at (DateTime UTC)         |
+| user_id (FK -&gt; users.id, Index)   |          +-----------------------------------+
+| date (String 10: YYYY-MM-DD, Idx) |
+| water_glasses (Integer)           |          +-----------------------------------+
+| target_glasses (Integer)          |          |            benchmarks             |
+| target_calories (Float)           |          +-----------------------------------+
+| target_protein (Float)            |          | id (PK, Integer)                  |
+| target_carbs (Float)              |          | user_id (FK -&gt; users.id, Index)   |
+| target_fat (Float)                |          | benchmark_id (String 50)          |
+| diet_preference (String 50)       |          | name (String 100)                 |
+| created_at (DateTime UTC)         |          | metric (String 100)               |
+| updated_at (DateTime UTC)         |          | value (String 50, Nullable)       |
++-----------------------------------+          | updated_at (DateTime UTC)         |
+                                               +-----------------------------------+
+</code></pre>
+<h3>6.2 Complete RESTful API Endpoint Catalog</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">HTTP Method</th>
+<th style="text-align:left">Route Endpoint</th>
+<th style="text-align:left">Authentication / Access</th>
+<th style="text-align:left">Request Payload Schema</th>
+<th style="text-align:left">Successful Response</th>
+<th style="text-align:left">Description &amp; Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">Public</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>{&quot;message&quot;: &quot;...&quot;, &quot;database&quot;: &quot;active&quot;}</code></td>
+<td style="text-align:left">Health probe checking API and database status</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/chat</code></td>
+<td style="text-align:left">Public / Token Optional</td>
+<td style="text-align:left"><code>ChatRequest(message, profile?)</code></td>
+<td style="text-align:left"><code>{&quot;answer&quot;: &quot;...&quot;, &quot;timings&quot;: {...}, &quot;sources&quot;: [...]}</code></td>
+<td style="text-align:left">RAG chatbot query returning evidence citations</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/auth/signup</code></td>
+<td style="text-align:left">Public</td>
+<td style="text-align:left"><code>SignupRequest(name, email, password)</code></td>
+<td style="text-align:left"><code>{&quot;user&quot;: {...}, &quot;access_token&quot;: &quot;...&quot;, ...}</code></td>
+<td style="text-align:left">Registers a new athlete account and returns JWT</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/auth/login</code></td>
+<td style="text-align:left">Public</td>
+<td style="text-align:left"><code>LoginRequest(email, password)</code></td>
+<td style="text-align:left"><code>{&quot;user&quot;: {...}, &quot;access_token&quot;: &quot;...&quot;, ...}</code></td>
+<td style="text-align:left">Authenticates athlete; verifies active status</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/auth/admin-login</code></td>
+<td style="text-align:left">Public</td>
+<td style="text-align:left"><code>LoginRequest(email, password)</code></td>
+<td style="text-align:left"><code>{&quot;admin&quot;: {...}, &quot;access_token&quot;: &quot;...&quot;, ...}</code></td>
+<td style="text-align:left">Authenticates platform staff with admin role</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/auth/me</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>{&quot;user&quot;: {...}}</code></td>
+<td style="text-align:left">Returns the currently authenticated user's profile</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/onboarding/profile</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>HealthProfile dict</code></td>
+<td style="text-align:left">Retrieves athlete's current health and fitness profile</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/onboarding/profile</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>HealthProfileRequest(...)</code></td>
+<td style="text-align:left"><code>HealthProfile dict</code></td>
+<td style="text-align:left">Saves or updates athlete's biometric health profile</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/workouts/session</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>WorkoutSessionRequest(...)</code></td>
+<td style="text-align:left"><code>WorkoutSession dict</code></td>
+<td style="text-align:left">Records a completed live workout session with stats</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/workouts/history</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>List[WorkoutSession dict]</code></td>
+<td style="text-align:left">Fetches recent workout session history (up to 50)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/analytics/user</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>UserAnalytics dict</code></td>
+<td style="text-align:left">Aggregates rep distributions, form trends, streaks</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/nutrition/daily</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>date</code> Query Param (YYYY-MM-DD)</td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Retrieves meals, consumed macros, targets for date</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/nutrition/profile</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>date</code> Query Param (YYYY-MM-DD)</td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Alias endpoint for full daily nutrition profile</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/meal</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>MealLogRequest(...)</code></td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Logs a meal in breakfast, lunch, snack, or dinner</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>DELETE</code></td>
+<td style="text-align:left"><code>/api/nutrition/meal/{id}</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>meal_id</code> Path Param</td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Deletes a logged meal entry and recalculates totals</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/water</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>WaterUpdateRequest(glasses, date)</code></td>
+<td style="text-align:left"><code>{&quot;waterGlasses&quot;: ..., ...}</code></td>
+<td style="text-align:left">Updates water consumption glass count for the date</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/targets</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>NutritionTargetsRequest(...)</code></td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Updates calorie, protein, carb, and fat targets</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/diet-preference</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>DietPreferenceRequest(...)</code></td>
+<td style="text-align:left"><code>{&quot;dietPreference&quot;: &quot;...&quot;}</code></td>
+<td style="text-align:left">Switches active diet (High Protein, Keto, etc.)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/sample-plan</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>NutritionDateRequest(date)</code></td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Populates the day with balanced sample meals</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/nutrition/reset</code></td>
+<td style="text-align:left">Bearer Token Required</td>
+<td style="text-align:left"><code>NutritionDateRequest(date)</code></td>
+<td style="text-align:left"><code>DailyNutritionResponse dict</code></td>
+<td style="text-align:left">Clears all logged meals and water for the date</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/admin/users</code></td>
+<td style="text-align:left">Admin Token Required</td>
+<td style="text-align:left"><code>search?</code>, <code>status?</code> Query Params</td>
+<td style="text-align:left"><code>List[AdminUser dict]</code></td>
+<td style="text-align:left">Returns all platform users with filtering</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/admin/users/{id}/status</code></td>
+<td style="text-align:left">Admin Token Required</td>
+<td style="text-align:left"><code>UserStatusUpdateRequest(status?)</code></td>
+<td style="text-align:left"><code>AdminUser dict</code></td>
+<td style="text-align:left">Toggles or sets user status (Active vs. Suspended)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/admin/athletes</code></td>
+<td style="text-align:left">Admin Token Required</td>
+<td style="text-align:left"><code>AdminCreateAthleteRequest(...)</code></td>
+<td style="text-align:left"><code>AdminUser dict</code></td>
+<td style="text-align:left">Administratively creates an athlete account</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/admin/analytics</code></td>
+<td style="text-align:left">Admin Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>AdminAnalytics dict</code></td>
+<td style="text-align:left">Returns platform counts and hardware diagnostics</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/admin/activity</code></td>
+<td style="text-align:left">Admin Token Required</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left"><code>List[ActivityLog dict]</code></td>
+<td style="text-align:left">Returns unified feed of workouts and registrations</td>
+</tr>
+</tbody>
+</table>
+<h3>6.3 Project File Inventory and Architectural Organization</h3>
+<pre><code>ai-fitness-coach/
+├── package.json                          # Node project dependencies and test scripts
+├── vite.config.js                        # Vite bundler configuration and dev server ports
+├── tailwind.config.js                    # Custom Tailwind design tokens (electric green, dark theme)
+├── src/
+│   ├── main.jsx                          # React application bootstrap and DOM mount
+│   ├── App.jsx                           # Primary router, layout wrappers, and chat slide-out drawer
+│   ├── context/
+│   │   ├── AuthContext.jsx               # Authentication state, login/logout, and user persistence
+│   │   └── NotificationContext.jsx       # Global notification toasts
+│   ├── services/
+│   │   ├── api.js                        # Complete REST client wrapping all backend endpoints
+│   │   ├── aiService.js                  # Chatbot client with ISO logging and timeout handling
+│   │   ├── poseDetection.js              # MediaPipe PoseLandmarker singleton and angle math
+│   │   ├── squatAnalyzer.js              # All 6 kinematic analyzers and unified ExerciseAnalyzer
+│   │   ├── squatAnalyzer.test.js         # 23 automated unit tests for angles and state machines
+│   │   └── liveWorkout.test.js           # Structural integrity tests for live workout components
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx                # Responsive navigation header with quick chat button
+│   │   │   ├── Footer.jsx                # Platform footer with legal and compliance links
+│   │   │   ├── AdminLayout.jsx           # Sidebar and layout for staff management portal
+│   │   │   ├── ProtectedRoute.jsx        # Route guard checking user authentication
+│   │   │   └── AdminRoute.jsx            # Route guard enforcing admin privileges
+│   │   ├── pose/
+│   │   │   ├── PoseCanvas.jsx            # High-performance HTML5 canvas skeletal renderer
+│   │   │   └── FormFeedbackHUD.jsx       # Real-time HUD displaying angles, reps, and cues
+│   │   └── ui/                           # Reusable UI component library (Buttons, Cards, Modals, Badges)
+│   ├── pages/
+│   │   ├── LandingPage.jsx               # Public homepage highlighting platform features
+│   │   ├── DashboardPage.jsx             # Main athlete portal with metrics and today's workout
+│   │   ├── LiveWorkoutPage.jsx           # Real-time camera mirror, pose detection, and rep tracking
+│   │   ├── WorkoutPlanPage.jsx           # Weekly routine viewer and custom slot builder
+│   │   ├── NutritionPage.jsx             # Daily meal logging, macro progress, and hydration
+│   │   ├── AnalyticsPage.jsx             # Chart.js visual trends, distributions, and benchmarks
+│   │   ├── ChatAssistantPage.jsx         # Grounded AI conversational assistant
+│   │   ├── OnboardingPage.jsx            # 4-stage biometric health questionnaire
+│   │   ├── auth/                         # Login, Signup, and AdminLogin pages
+│   │   └── admin/                        # AdminOverview, AdminUsers, AdminContent, AdminActivity
+│   └── data/                             # Mock baseline data (mockWorkouts, mockNutrition, mockAdminData)
+└── backend/
+    ├── main.py                           # FastAPI application, CORS, lifespan warmup, and routes
+    ├── models.py                         # SQLAlchemy database models for all 6 tables
+    ├── database.py                       # Engine, sessionmaker, and dependency provider
+    ├── auth.py                           # Bcrypt password hashing and JWT token handlers
+    ├── rag.py                            # FAISS retrieval, Gemini client, and grounded prompt engine
+    ├── ingest.py                         # Ingestion script compiling knowledge.json to FAISS index
+    ├── data/
+    │   └── knowledge.json                # 123 verified peer-reviewed sports science evidence chunks
+    ├── index/
+    │   ├── fitness.index                 # FAISS binary vector index (384 dimensions)
+    │   └── documents.json                # Document metadata and citation lookup tables
+    └── test_live_chat.py                 # Live verification test script benchmarking RAG latency
+</code></pre>
+<hr />
+<h2>7. TESTING, VERIFICATION, LIMITATIONS, AND TROUBLESHOOTING</h2>
+<h3>7.1 Automated Unit and Biomechanical Test Suite</h3>
+<p>The frontend incorporates 23 automated unit tests executed via the native Node.js test runner:</p>
+<pre><code class="language-powershell">npm test
+</code></pre>
+<p><em>Verification Results:</em></p>
+<pre><code>✔ LiveWorkoutPage source code integrity and undefined ref check (5.26ms)
+✔ calculateJointAngle computes accurate angles for standard geometric vertices (1.05ms)
+✔ calculateJointAngle rejects landmarks with visibility below confidence threshold (0.16ms)
+✔ calculateJointAngle safely handles null or undefined points (0.08ms)
+✔ SquatAnalyzer tracks full repetition lifecycle and counts exactly 1 repetition (0.94ms)
+✔ SquatAnalyzer counts consecutive repetitions accurately (0.37ms)
+✔ SquatAnalyzer rejects incomplete partial reps (quarter squat) without counting (0.20ms)
+✔ SquatAnalyzer does not trigger false state switches during noisy threshold jitter (0.16ms)
+✔ SquatAnalyzer rejects unrealistically fast glitch movements (anti-bounce velocity limit) (0.11ms)
+✔ SquatAnalyzer resets state safely when tracking is lost mid-movement (0.15ms)
+✔ SquatAnalyzer produces null form score before reps and objective score after reps (0.23ms)
+✔ PushupAnalyzer tracks chest depth and arm lockout to count repetitions (1.24ms)
+✔ CurlAnalyzer tracks peak bicep contraction and full extension (0.36ms)
+✔ DeadliftAnalyzer tracks full repetition lifecycle and counts repetition (0.67ms)
+✔ DeadliftAnalyzer detects squatting error when knees excessively flex during hinge (0.14ms)
+✔ DeadliftAnalyzer rejects incomplete shallow hinge without counting (0.13ms)
+✔ LungeAnalyzer tracks full repetition lifecycle and counts repetition (0.54ms)
+✔ LungeAnalyzer detects forward torso collapse error during lunge descent (0.11ms)
+✔ LungeAnalyzer rejects incomplete partial lunge without counting (0.10ms)
+✔ PlankAnalyzer tracks isometric hold time in seconds with straight alignment (0.64ms)
+✔ PlankAnalyzer detects sagging hips and pauses hold accumulation (0.15ms)
+✔ PlankAnalyzer detects piking hips and pauses hold accumulation (0.08ms)
+✔ ExerciseAnalyzer dynamically switches and processes all 6 exercises (0.72ms)
+
+ℹ tests 23 | pass 23 | fail 0 | cancelled 0 | skipped 0 | duration_ms 217.48ms
+</code></pre>
+<h3>7.2 Backend Database and Service Verification Tests</h3>
+<p>Backend database models, relational cascades, migrations, and endpoints were verified using Python's <code>unittest</code> framework:</p>
+<pre><code class="language-powershell">cd backend
+.\venv\Scripts\python.exe -m unittest test_admin_database.py test_nutrition_database.py
+</code></pre>
+<p><em>Results:</em> <strong>Ran 22 tests in 2.038s — OK (22 passed, 0 failed)</strong>.
+Verified:</p>
+<ul>
+<li>User creation, duplicate email rejection, and Bcrypt verification.</li>
+<li>Admin authentication enforcement and prevention of admin self-suspension.</li>
+<li>Cascade deletion of health profiles, workouts, meals, and daily nutrition when a user is deleted.</li>
+<li>Nutrition slot population, macronutrient aggregation, and date validation.</li>
+</ul>
+<h3>7.3 Live Chatbot Latency and RAG Benchmark Verification</h3>
+<p>The RAG pipeline was benchmarked against the live running server using [<code>backend/test_live_chat.py</code>](file:///c:/Users/ajitk/.gemini/antigravity-ide/scratch/ai-fitness-coach/backend/test_live_chat.py):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Test Query</th>
+<th style="text-align:left">Target Evidence Domain</th>
+<th style="text-align:center">Embedding (ms)</th>
+<th style="text-align:center">FAISS Search (ms)</th>
+<th style="text-align:center">Gemini LLM (ms)</th>
+<th style="text-align:center">Total Roundtrip (s)</th>
+<th style="text-align:left">Primary Citations Returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>&quot;What is progressive overload, and how can I apply it to my strength training?&quot;</strong></td>
+<td style="text-align:left">Resistance Training Principles</td>
+<td style="text-align:center">17.07 ms</td>
+<td style="text-align:center">0.22 ms</td>
+<td style="text-align:center">2,870.63 ms</td>
+<td style="text-align:center"><strong>2.91 s</strong></td>
+<td style="text-align:left">ACSM (2026) [PMID: 41843416], BJSM (2023) [PMID: 37414459]</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;How much daily protein is recommended for muscle hypertrophy in healthy adults?&quot;</strong></td>
+<td style="text-align:left">Sports Nutrition &amp; Hypertrophy</td>
+<td style="text-align:center">14.62 ms</td>
+<td style="text-align:center">0.26 ms</td>
+<td style="text-align:center">2,433.83 ms</td>
+<td style="text-align:center"><strong>2.45 s</strong></td>
+<td style="text-align:left">ISSN (2017) [PMID: 28642676], ACSM (2026) [PMID: 41843416]</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;What is the recommended hydration strategy during prolonged exercise?&quot;</strong></td>
+<td style="text-align:left">Exercise Fluid Replacement</td>
+<td style="text-align:center">16.47 ms</td>
+<td style="text-align:center">0.25 ms</td>
+<td style="text-align:center">1,522.01 ms</td>
+<td style="text-align:center"><strong>1.54 s</strong></td>
+<td style="text-align:left">ACSM (2007) [PMID: 17277604]</td>
+</tr>
+</tbody>
+</table>
+<p><em>Historical Bottleneck Comparison:</em> Prior to optimization, queries hung for <strong>146.48 seconds (2m 26s)</strong> due to an invalid model name (<code>gemini-3.8-flash</code>) combined with unbounded retry policies. Following optimization (configuring client timeouts, failing fast on 504 errors, and prioritizing <code>gemini-3.5-flash-lite</code>), end-to-end latency dropped to <strong>1.54s – 2.91s</strong>, representing a <strong>50x speedup</strong>.</p>
+<h3>7.4 Production Build and Static Lint Verification</h3>
+<ul>
+<li><strong>Frontend Production Build:</strong> <code>npm run build</code> executed via Vite. Output generated cleanly in <code>dist/</code> with zero compile errors.</li>
+<li><strong>Static Linter:</strong> <code>npx oxlint</code> executed across all modified files, confirming zero syntax errors, undeclared variables, or broken imports.</li>
+</ul>
+<h3>7.5 Implemented vs. Unverified/Incomplete Features</h3>
+<h4>Fully Implemented and Verified</h4>
+<ul>
+<li>[x] Dual-role authentication (Bcrypt salting, JWT tokens, protected routes).</li>
+<li>[x] 4-step biometric onboarding with SQLite persistence.</li>
+<li>[x] MediaPipe edge pose estimation with Wasm/GPU acceleration and CDN fallback.</li>
+<li>[x] Mathematical joint angle vector math with Exponential Moving Average smoothing.</li>
+<li>[x] Multi-stage state machine rep counting for Squats, Push-ups, Deadlifts, Curls, Lunges, and Planks.</li>
+<li>[x] Anti-bounce 900ms human tempo validation and parallel depth gating.</li>
+<li>[x] Real-time Web Speech Synthesis audio coaching with 2.8s debounce cooldown.</li>
+<li>[x] Live workout simulation mode for hardware-free testing and demonstrations.</li>
+<li>[x] Relational session persistence (reps, sets, accuracy, calories burned) to SQLite.</li>
+<li>[x] FAISS dense vector retrieval over 123 peer-reviewed sports science evidence chunks.</li>
+<li>[x] Google Gemini RAG generation with strict citation formatting and negative constraints.</li>
+<li>[x] Comprehensive nutrition tracking with meal slots, water logging, and macro progress bars.</li>
+<li>[x] Chart.js visualization of form accuracy trends and rep distributions.</li>
+<li>[x] Administrative console with user moderation, hardware diagnostics, and audit logs.</li>
+</ul>
+<h4>Deliberately Out-of-Scope or Unverified Limitations</h4>
+<ul>
+<li>[ ] <em>3D Multi-Camera Triangulation:</em> Monocular 2D webcams approximate depth along the Z-axis; transverse plane rotations (e.g., subtle torso twisting) have higher error margins than sagittal or frontal views.</li>
+<li>[ ] <em>Offline Local LLM Generation:</em> When Google Gemini is unreachable, the system gracefully declines to answer rather than hallucinating; hosting an on-device 7B parameter LLM was omitted to keep hardware requirements lightweight.</li>
+<li>[ ] <em>Automated Multi-Month Periodization Engine:</em> The weekly workout plan renders pre-configured scientific routines; automated weekly weight increment recommendations based on past sessions are planned for future versions.</li>
+<li>[ ] <em>Mobile Safari Background Execution:</em> Tested primarily on desktop browsers (Chrome, Edge, Firefox). Background tab execution on iOS Safari may throttle WebGL context and pause camera tracking.</li>
+</ul>
+<h3>7.6 Known Limitations and Biomechanical Constraints</h3>
+<ol>
+<li><strong>Camera Framing &amp; Field of View:</strong> For lower body exercises (squats, lunges, deadlifts), the athlete's full body (from head to feet) must be visible in the camera frame. If the athlete stands too close, the analyzer enters the <code>UNTRACKED</code> state.</li>
+<li><strong>Lighting and Clothing Contrast:</strong> Extremely dim lighting or loose, baggy clothing can obscure joint centers, degrading landmark visibility confidence scores.</li>
+<li><strong>Sagittal Alignment:</strong> Exercises such as Deadlifts and Push-ups require the camera to be positioned at an oblique or side angle (approximately 45° to 90° relative to the body) to observe hip hinge and elbow flexion accurately.</li>
+</ol>
+<h3>7.7 System Troubleshooting Guide</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Issue / Symptom</th>
+<th style="text-align:left">Probable Root Cause</th>
+<th style="text-align:left">Resolution Procedure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Black Screen on Live Workout</strong></td>
+<td style="text-align:left">Browser webcam permission denied or camera claimed by another app</td>
+<td style="text-align:left">1. Check browser address bar for camera permission icon and select &quot;Always Allow&quot;.<br>2. Close conflicting apps (Zoom, Teams).<br>3. Toggle &quot;Simulation Mode&quot; to verify UI independently of camera hardware.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Chatbot Takes &gt;30s or Times Out</strong></td>
+<td style="text-align:left">Gemini API rate limiting or temporary network interruption</td>
+<td style="text-align:left">1. Verify API key in <code>backend/.env</code>.<br>2. Check backend console logs for <code>GEMINI_REQUEST_START</code>.<br>3. The backend will automatically fail over to <code>gemini-3.5-flash</code>. The frontend will abort after 35s if unreachable.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Reps Not Counting During Squats</strong></td>
+<td style="text-align:left">Incomplete depth or standing too close to camera</td>
+<td style="text-align:left">1. Ensure hip crease descends below patella ($\le 100^\circ$ knee angle).<br>2. Step back until ankles, knees, and hips are highlighted with green dots on the canvas.<br>3. Avoid rushing reps faster than 900ms.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>MediaPipe Wasm Load Failure</strong></td>
+<td style="text-align:left">Local Wasm files blocked by strict CORS headers</td>
+<td style="text-align:left">The system automatically catches local Wasm errors and redirects to the jsDelivr CDN (<code>cdn.jsdelivr.net</code>). Ensure an active internet connection on first load.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CORS Network Error from Frontend</strong></td>
+<td style="text-align:left">FastAPI running on a different port than expected</td>
+<td style="text-align:left">The backend CORS policy permits <code>http://localhost:5173</code> and <code>http://localhost:5174</code>. Ensure the frontend runs on one of these approved origins.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. CONCLUSION AND FUTURE ROADMAP</h2>
+<h3>8.1 Summary of Contributions</h3>
+<p>The <strong>AI Fitness Coach</strong> project demonstrates that advanced computer vision and evidence-grounded artificial intelligence can be effectively unified into an accessible, responsive web application. By offloading pose estimation to client-side WebAssembly and WebGL, the platform delivers zero-latency kinematic feedback while maintaining biometric privacy. By coupling dense vector search (FAISS) with strict prompt boundaries, the system eliminates generative hallucinations and provides athletes with trustworthy, citation-backed exercise science guidance. The addition of robust relational tracking, nutrition management, and administrative oversight yields an enterprise-grade fitness solution.</p>
+<h3>8.2 Future Enhancements</h3>
+<ol>
+<li><strong>On-Device Quantized LLM Inference:</strong> Integrate WebLLM / ONNX Runtime to run compact 3B parameter models locally in WebGPU, enabling offline conversational coaching.</li>
+<li><strong>Barbell Velocity Based Training (VBT):</strong> Implement object detection to track the concentric speed (m/s) of the barbell barbell path, allowing autoregulated load adjustments.</li>
+<li><strong>Wearable Health Sensor Synchronization:</strong> Integrate Web Bluetooth API to stream real-time heart rate and HRV from chest straps and smart rings during workouts.</li>
+<li><strong>Physiotherapy &amp; Rehabilitation Mode:</strong> Extend kinematic analyzers to track joint range of motion (ROM) for post-operative rehabilitation patients, generating clinical compliance reports for physical therapists.</li>
+</ol>
+<hr />
+<p><em>Report Compiled and Generated for Academic &amp; Technical Evaluation.</em><br />
+<em>AI Fitness Coach Platform — Built with React, Vite, FastAPI, MediaPipe, FAISS, and Google GenAI.</em></p>
+
+
+</body>
+</html>

@@ -1,0 +1,3558 @@
+{
+  "schema_version": 4,
+  "corpus_name": "AI Fitness Coach Evidence Corpus — 3x expanded",
+  "description": "Expanded retrieval corpus: 123 retrieval chunks derived from 41 evidence records, preserving source metadata and population/safety boundaries. No new quantitative claims were invented.",
+  "last_researched": "2026-09-09",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunks": [
+    {
+      "id": "rt_001_core",
+      "topic": "resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Resistance training reliably improves muscle strength and muscle size compared with no exercise. The 2026 ACSM overview of 137 systematic reviews found that relatively few prescription variables consistently changed the main adaptations, so the coach should avoid treating one exact program design as universally optimal.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "resistance training",
+        "strength",
+        "hypertrophy",
+        "healthy adults",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_001"
+    },
+    {
+      "id": "rt_001_scope",
+      "topic": "resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Resistance training reliably improves muscle strength and muscle size compared with no exercise. The 2026 ACSM overview of 137 systematic reviews found that relatively few prescription variables consistently changed the main adaptations, so the coach should avoid treating one exact program design as universally optimal.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "resistance training",
+        "strength",
+        "hypertrophy",
+        "healthy adults",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_001"
+    },
+    {
+      "id": "rt_001_boundary",
+      "topic": "resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Resistance training reliably improves muscle strength and muscle size compared with no exercise. The 2026 ACSM overview of 137 systematic reviews found that relatively few prescription variables consistently changed the main adaptations, so the coach should avoid treating one exact program design as universally optimal.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "resistance training",
+        "strength",
+        "hypertrophy",
+        "healthy adults",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_001"
+    },
+    {
+      "id": "rt_002_core",
+      "topic": "strength training",
+      "population": "healthy adults",
+      "evidence_text": "For maximal strength, the 2026 ACSM position stand found stronger outcomes with heavier loading, complete range of motion, multiple sets, and training the relevant movement early in the session. The finding is about population-level programming evidence, not a requirement that every healthy adult use heavy loads.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "strength",
+        "load",
+        "range of motion",
+        "sets",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_002"
+    },
+    {
+      "id": "rt_002_scope",
+      "topic": "strength training",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. For maximal strength, the 2026 ACSM position stand found stronger outcomes with heavier loading, complete range of motion, multiple sets, and training the relevant movement early in the session. The finding is about population-level programming evidence, not a requirement that every healthy adult use heavy loads.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "strength",
+        "load",
+        "range of motion",
+        "sets",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_002"
+    },
+    {
+      "id": "rt_002_boundary",
+      "topic": "strength training",
+      "population": "healthy adults",
+      "evidence_text": "For maximal strength, the 2026 ACSM position stand found stronger outcomes with heavier loading, complete range of motion, multiple sets, and training the relevant movement early in the session. The finding is about population-level programming evidence, not a requirement that every healthy adult use heavy loads.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "strength",
+        "load",
+        "range of motion",
+        "sets",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_002"
+    },
+    {
+      "id": "rt_003_core",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "The 2026 ACSM overview reports that higher training volume is associated with greater muscle hypertrophy and identifies at least 10 sets per muscle group per week as a level associated with enhanced hypertrophy in the reviewed evidence. This is an evidence-supported population-level reference point, not a mandatory minimum for every person.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "hypertrophy",
+        "volume",
+        "weekly sets",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_003"
+    },
+    {
+      "id": "rt_003_scope",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. The 2026 ACSM overview reports that higher training volume is associated with greater muscle hypertrophy and identifies at least 10 sets per muscle group per week as a level associated with enhanced hypertrophy in the reviewed evidence. This is an evidence-supported population-level reference point, not a mandatory minimum for every person.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "hypertrophy",
+        "volume",
+        "weekly sets",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_003"
+    },
+    {
+      "id": "rt_003_boundary",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "The 2026 ACSM overview reports that higher training volume is associated with greater muscle hypertrophy and identifies at least 10 sets per muscle group per week as a level associated with enhanced hypertrophy in the reviewed evidence. This is an evidence-supported population-level reference point, not a mandatory minimum for every person.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "hypertrophy",
+        "volume",
+        "weekly sets",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_003"
+    },
+    {
+      "id": "rt_004_core",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "A 2023 Bayesian network meta-analysis found that all tested resistance-training prescriptions improved strength and hypertrophy compared with no exercise. Higher-load prescriptions ranked best for strength, while multiple-set prescriptions ranked highly for hypertrophy; many prescription combinations had similar estimated effects.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "hypertrophy",
+        "strength",
+        "sets",
+        "load",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_004"
+    },
+    {
+      "id": "rt_004_scope",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A 2023 Bayesian network meta-analysis found that all tested resistance-training prescriptions improved strength and hypertrophy compared with no exercise. Higher-load prescriptions ranked best for strength, while multiple-set prescriptions ranked highly for hypertrophy; many prescription combinations had similar estimated effects.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "hypertrophy",
+        "strength",
+        "sets",
+        "load",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_004"
+    },
+    {
+      "id": "rt_004_boundary",
+      "topic": "hypertrophy",
+      "population": "healthy adults",
+      "evidence_text": "A 2023 Bayesian network meta-analysis found that all tested resistance-training prescriptions improved strength and hypertrophy compared with no exercise. Higher-load prescriptions ranked best for strength, while multiple-set prescriptions ranked highly for hypertrophy; many prescription combinations had similar estimated effects.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "hypertrophy",
+        "strength",
+        "sets",
+        "load",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_004"
+    },
+    {
+      "id": "rt_005_core",
+      "topic": "training volume",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review and meta-analysis found a dose-response relationship between weekly resistance-training volume and muscle hypertrophy, with greater weekly set volume generally associated with greater muscle-size gains. The relationship should not be interpreted as unlimited benefit from adding sets; the evidence does not establish a single universally optimal volume.",
+      "source": {
+        "source_id": "Schoenfeld_volume_2017",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: a systematic review and meta-analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "27433992",
+        "doi": "10.1080/02640414.2016.1210197",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/"
+      },
+      "tags": [
+        "volume",
+        "weekly sets",
+        "hypertrophy",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_005"
+    },
+    {
+      "id": "rt_005_scope",
+      "topic": "training volume",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A systematic review and meta-analysis found a dose-response relationship between weekly resistance-training volume and muscle hypertrophy, with greater weekly set volume generally associated with greater muscle-size gains. The relationship should not be interpreted as unlimited benefit from adding sets; the evidence does not establish a single universally optimal volume.",
+      "source": {
+        "source_id": "Schoenfeld_volume_2017",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: a systematic review and meta-analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "27433992",
+        "doi": "10.1080/02640414.2016.1210197",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/"
+      },
+      "tags": [
+        "volume",
+        "weekly sets",
+        "hypertrophy",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_005"
+    },
+    {
+      "id": "rt_005_boundary",
+      "topic": "training volume",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review and meta-analysis found a dose-response relationship between weekly resistance-training volume and muscle hypertrophy, with greater weekly set volume generally associated with greater muscle-size gains. The relationship should not be interpreted as unlimited benefit from adding sets; the evidence does not establish a single universally optimal volume.",
+      "source": {
+        "source_id": "Schoenfeld_volume_2017",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: a systematic review and meta-analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "27433992",
+        "doi": "10.1080/02640414.2016.1210197",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/"
+      },
+      "tags": [
+        "volume",
+        "weekly sets",
+        "hypertrophy",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_005"
+    },
+    {
+      "id": "rt_006_core",
+      "topic": "training frequency",
+      "population": "healthy adults",
+      "evidence_text": "When weekly training volume is equated, a systematic review and meta-analysis found no meaningful advantage of higher versus lower muscle-training frequency for hypertrophy. Frequency can therefore be selected partly for schedule, fatigue management, and the practical distribution of weekly volume rather than assuming that a specific frequency is biologically mandatory.",
+      "source": {
+        "source_id": "Grgic_frequency_2018",
+        "organization": "Sports Medicine",
+        "authors": "Jozo Grgic et al.",
+        "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis",
+        "publication_year": 2019,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "30558493",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30558493/"
+      },
+      "tags": [
+        "frequency",
+        "hypertrophy",
+        "volume-equated",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_006"
+    },
+    {
+      "id": "rt_006_scope",
+      "topic": "training frequency",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. When weekly training volume is equated, a systematic review and meta-analysis found no meaningful advantage of higher versus lower muscle-training frequency for hypertrophy. Frequency can therefore be selected partly for schedule, fatigue management, and the practical distribution of weekly volume rather than assuming that a specific frequency is biologically mandatory.",
+      "source": {
+        "source_id": "Grgic_frequency_2018",
+        "organization": "Sports Medicine",
+        "authors": "Jozo Grgic et al.",
+        "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis",
+        "publication_year": 2019,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "30558493",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30558493/"
+      },
+      "tags": [
+        "frequency",
+        "hypertrophy",
+        "volume-equated",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_006"
+    },
+    {
+      "id": "rt_006_boundary",
+      "topic": "training frequency",
+      "population": "healthy adults",
+      "evidence_text": "When weekly training volume is equated, a systematic review and meta-analysis found no meaningful advantage of higher versus lower muscle-training frequency for hypertrophy. Frequency can therefore be selected partly for schedule, fatigue management, and the practical distribution of weekly volume rather than assuming that a specific frequency is biologically mandatory.",
+      "source": {
+        "source_id": "Grgic_frequency_2018",
+        "organization": "Sports Medicine",
+        "authors": "Jozo Grgic et al.",
+        "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis",
+        "publication_year": 2019,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "30558493",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30558493/"
+      },
+      "tags": [
+        "frequency",
+        "hypertrophy",
+        "volume-equated",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_006"
+    },
+    {
+      "id": "rt_007_core",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "Systematic-review evidence indicates that a broad range of resistance-training loads can produce muscle hypertrophy. Higher loads are more advantageous for maximal strength, while lower loads can still stimulate hypertrophy when the training stimulus is adequate. Therefore the coach should not claim that one narrow repetition range is the only effective range for muscle growth.",
+      "source": {
+        "source_id": "Schoenfeld_load_2021",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Influence of resistance training load on measures of skeletal muscle hypertrophy and improvements in maximal strength and neuromuscular task performance: a systematic review and meta-analysis",
+        "publication_year": 2021,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "33874848",
+        "doi": "10.1080/02640414.2021.1898094",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33874848/"
+      },
+      "tags": [
+        "repetitions",
+        "load",
+        "hypertrophy",
+        "strength",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_007"
+    },
+    {
+      "id": "rt_007_scope",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Systematic-review evidence indicates that a broad range of resistance-training loads can produce muscle hypertrophy. Higher loads are more advantageous for maximal strength, while lower loads can still stimulate hypertrophy when the training stimulus is adequate. Therefore the coach should not claim that one narrow repetition range is the only effective range for muscle growth.",
+      "source": {
+        "source_id": "Schoenfeld_load_2021",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Influence of resistance training load on measures of skeletal muscle hypertrophy and improvements in maximal strength and neuromuscular task performance: a systematic review and meta-analysis",
+        "publication_year": 2021,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "33874848",
+        "doi": "10.1080/02640414.2021.1898094",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33874848/"
+      },
+      "tags": [
+        "repetitions",
+        "load",
+        "hypertrophy",
+        "strength",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_007"
+    },
+    {
+      "id": "rt_007_boundary",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "Systematic-review evidence indicates that a broad range of resistance-training loads can produce muscle hypertrophy. Higher loads are more advantageous for maximal strength, while lower loads can still stimulate hypertrophy when the training stimulus is adequate. Therefore the coach should not claim that one narrow repetition range is the only effective range for muscle growth.",
+      "source": {
+        "source_id": "Schoenfeld_load_2021",
+        "organization": "Journal of Sports Sciences",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "Influence of resistance training load on measures of skeletal muscle hypertrophy and improvements in maximal strength and neuromuscular task performance: a systematic review and meta-analysis",
+        "publication_year": 2021,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "33874848",
+        "doi": "10.1080/02640414.2021.1898094",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33874848/"
+      },
+      "tags": [
+        "repetitions",
+        "load",
+        "hypertrophy",
+        "strength",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_007"
+    },
+    {
+      "id": "rt_008_core",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review comparing volume-matched very-low, low, moderate, and high resistance-training loads found no clear difference in hypertrophy across the tested load categories, while higher loads favored maximal-strength gains. This supports flexible rep selection for hypertrophy rather than a single mandatory rep target.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "repetitions",
+        "sets",
+        "hypertrophy",
+        "strength",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_008"
+    },
+    {
+      "id": "rt_008_scope",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A systematic review comparing volume-matched very-low, low, moderate, and high resistance-training loads found no clear difference in hypertrophy across the tested load categories, while higher loads favored maximal-strength gains. This supports flexible rep selection for hypertrophy rather than a single mandatory rep target.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "repetitions",
+        "sets",
+        "hypertrophy",
+        "strength",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_008"
+    },
+    {
+      "id": "rt_008_boundary",
+      "topic": "repetitions and load",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review comparing volume-matched very-low, low, moderate, and high resistance-training loads found no clear difference in hypertrophy across the tested load categories, while higher loads favored maximal-strength gains. This supports flexible rep selection for hypertrophy rather than a single mandatory rep target.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "repetitions",
+        "sets",
+        "hypertrophy",
+        "strength",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_008"
+    },
+    {
+      "id": "rt_009_core",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "Meta-analytic evidence does not show that taking every resistance-training set to momentary muscular failure is necessary for hypertrophy. A 2023 systematic review found no clear superiority of momentary failure over non-failure training, while a 2024 meta-regression found that hypertrophy tended to increase as sets were terminated closer to failure. These findings support effortful training without making momentary failure a universal requirement.",
+      "source": {
+        "source_id": "Refalo_failure_2023",
+        "organization": "Sports Medicine",
+        "authors": "Martin C. Refalo et al.",
+        "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "36334240",
+        "doi": "10.1007/s40279-022-01784-y",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36334240/"
+      },
+      "tags": [
+        "failure",
+        "RIR",
+        "effort",
+        "hypertrophy",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not prescribe failure as mandatory; individual tolerance, exercise risk, and fatigue matter.",
+      "derived_from": "rt_009"
+    },
+    {
+      "id": "rt_009_scope",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Meta-analytic evidence does not show that taking every resistance-training set to momentary muscular failure is necessary for hypertrophy. A 2023 systematic review found no clear superiority of momentary failure over non-failure training, while a 2024 meta-regression found that hypertrophy tended to increase as sets were terminated closer to failure. These findings support effortful training without making momentary failure a universal requirement.",
+      "source": {
+        "source_id": "Refalo_failure_2023",
+        "organization": "Sports Medicine",
+        "authors": "Martin C. Refalo et al.",
+        "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "36334240",
+        "doi": "10.1007/s40279-022-01784-y",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36334240/"
+      },
+      "tags": [
+        "failure",
+        "RIR",
+        "effort",
+        "hypertrophy",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not prescribe failure as mandatory; individual tolerance, exercise risk, and fatigue matter.",
+      "derived_from": "rt_009"
+    },
+    {
+      "id": "rt_009_boundary",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "Evidence boundary: Do not prescribe failure as mandatory; individual tolerance, exercise risk, and fatigue matter.. Meta-analytic evidence does not show that taking every resistance-training set to momentary muscular failure is necessary for hypertrophy. A 2023 systematic review found no clear superiority of momentary failure over non-failure training, while a 2024 meta-regression found that hypertrophy tended to increase as sets were terminated closer to failure. These findings support effortful training without making momentary failure a universal requirement.",
+      "source": {
+        "source_id": "Refalo_failure_2023",
+        "organization": "Sports Medicine",
+        "authors": "Martin C. Refalo et al.",
+        "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "36334240",
+        "doi": "10.1007/s40279-022-01784-y",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36334240/"
+      },
+      "tags": [
+        "failure",
+        "RIR",
+        "effort",
+        "hypertrophy",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not prescribe failure as mandatory; individual tolerance, exercise risk, and fatigue matter.",
+      "derived_from": "rt_009"
+    },
+    {
+      "id": "rt_010_core",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "The 2024 meta-regression suggests a negative relationship between estimated repetitions in reserve and hypertrophy: on average, sets ending closer to failure were associated with greater muscle-size changes. The analysis had modest model fit and used estimated rather than directly measured repetitions in reserve, so it should guide interpretation rather than justify a precise universal RIR prescription.",
+      "source": {
+        "source_id": "Robinson_RIR_2024",
+        "organization": "Sports Medicine",
+        "authors": "Zac P. Robinson et al.",
+        "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+        "publication_year": 2024,
+        "source_type": "meta_regression",
+        "pmid": "38970765",
+        "doi": "10.1007/s40279-024-02069-2",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/"
+      },
+      "tags": [
+        "RIR",
+        "proximity to failure",
+        "hypertrophy",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_010"
+    },
+    {
+      "id": "rt_010_scope",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. The 2024 meta-regression suggests a negative relationship between estimated repetitions in reserve and hypertrophy: on average, sets ending closer to failure were associated with greater muscle-size changes. The analysis had modest model fit and used estimated rather than directly measured repetitions in reserve, so it should guide interpretation rather than justify a precise universal RIR prescription.",
+      "source": {
+        "source_id": "Robinson_RIR_2024",
+        "organization": "Sports Medicine",
+        "authors": "Zac P. Robinson et al.",
+        "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+        "publication_year": 2024,
+        "source_type": "meta_regression",
+        "pmid": "38970765",
+        "doi": "10.1007/s40279-024-02069-2",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/"
+      },
+      "tags": [
+        "RIR",
+        "proximity to failure",
+        "hypertrophy",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_010"
+    },
+    {
+      "id": "rt_010_boundary",
+      "topic": "training to failure",
+      "population": "healthy adults",
+      "evidence_text": "The 2024 meta-regression suggests a negative relationship between estimated repetitions in reserve and hypertrophy: on average, sets ending closer to failure were associated with greater muscle-size changes. The analysis had modest model fit and used estimated rather than directly measured repetitions in reserve, so it should guide interpretation rather than justify a precise universal RIR prescription.",
+      "source": {
+        "source_id": "Robinson_RIR_2024",
+        "organization": "Sports Medicine",
+        "authors": "Zac P. Robinson et al.",
+        "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+        "publication_year": 2024,
+        "source_type": "meta_regression",
+        "pmid": "38970765",
+        "doi": "10.1007/s40279-024-02069-2",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/"
+      },
+      "tags": [
+        "RIR",
+        "proximity to failure",
+        "hypertrophy",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_010"
+    },
+    {
+      "id": "rt_011_core",
+      "topic": "rest between sets",
+      "population": "healthy adults",
+      "evidence_text": "A 2024 Bayesian systematic review found substantial overlap among different inter-set rest durations. The evidence suggested a small hypertrophy benefit to resting longer than 60 seconds, possibly because longer rests help preserve training volume, while differences above roughly 90 seconds were not appreciable in that analysis. Rest should therefore be adjusted to maintain useful training quality rather than imposed as a rigid rule.",
+      "source": {
+        "source_id": "Grgic_rest_2024",
+        "organization": "Frontiers in Sports and Active Living",
+        "authors": "Alec Singer et al.",
+        "title": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+        "publication_year": 2024,
+        "source_type": "systematic_review_bayesian_meta_analysis",
+        "pmid": "39205815",
+        "doi": "10.3389/fspor.2024.1429789",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39205815/"
+      },
+      "tags": [
+        "rest",
+        "recovery",
+        "hypertrophy",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_011"
+    },
+    {
+      "id": "rt_011_scope",
+      "topic": "rest between sets",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A 2024 Bayesian systematic review found substantial overlap among different inter-set rest durations. The evidence suggested a small hypertrophy benefit to resting longer than 60 seconds, possibly because longer rests help preserve training volume, while differences above roughly 90 seconds were not appreciable in that analysis. Rest should therefore be adjusted to maintain useful training quality rather than imposed as a rigid rule.",
+      "source": {
+        "source_id": "Grgic_rest_2024",
+        "organization": "Frontiers in Sports and Active Living",
+        "authors": "Alec Singer et al.",
+        "title": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+        "publication_year": 2024,
+        "source_type": "systematic_review_bayesian_meta_analysis",
+        "pmid": "39205815",
+        "doi": "10.3389/fspor.2024.1429789",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39205815/"
+      },
+      "tags": [
+        "rest",
+        "recovery",
+        "hypertrophy",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_011"
+    },
+    {
+      "id": "rt_011_boundary",
+      "topic": "rest between sets",
+      "population": "healthy adults",
+      "evidence_text": "A 2024 Bayesian systematic review found substantial overlap among different inter-set rest durations. The evidence suggested a small hypertrophy benefit to resting longer than 60 seconds, possibly because longer rests help preserve training volume, while differences above roughly 90 seconds were not appreciable in that analysis. Rest should therefore be adjusted to maintain useful training quality rather than imposed as a rigid rule.",
+      "source": {
+        "source_id": "Grgic_rest_2024",
+        "organization": "Frontiers in Sports and Active Living",
+        "authors": "Alec Singer et al.",
+        "title": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+        "publication_year": 2024,
+        "source_type": "systematic_review_bayesian_meta_analysis",
+        "pmid": "39205815",
+        "doi": "10.3389/fspor.2024.1429789",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39205815/"
+      },
+      "tags": [
+        "rest",
+        "recovery",
+        "hypertrophy",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "rt_011"
+    },
+    {
+      "id": "rt_012_core",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "Progression is a core principle of resistance training: the training stimulus must remain sufficiently challenging as a person adapts. A 2026 randomized study reported greater muscle growth with progressive overload than without overload progression in the studied population, while noting that training without progression can still produce hypertrophy in some previously untrained people. The coach should therefore treat progression as a useful strategy, not as a promise that every session must increase load.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "progressive overload",
+        "progression",
+        "adaptation",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_012"
+    },
+    {
+      "id": "rt_012_scope",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Progression is a core principle of resistance training: the training stimulus must remain sufficiently challenging as a person adapts. A 2026 randomized study reported greater muscle growth with progressive overload than without overload progression in the studied population, while noting that training without progression can still produce hypertrophy in some previously untrained people. The coach should therefore treat progression as a useful strategy, not as a promise that every session must increase load.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "progressive overload",
+        "progression",
+        "adaptation",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_012"
+    },
+    {
+      "id": "rt_012_boundary",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "Progression is a core principle of resistance training: the training stimulus must remain sufficiently challenging as a person adapts. A 2026 randomized study reported greater muscle growth with progressive overload than without overload progression in the studied population, while noting that training without progression can still produce hypertrophy in some previously untrained people. The coach should therefore treat progression as a useful strategy, not as a promise that every session must increase load.",
+      "source": {
+        "source_id": "ACSM_RT_2026",
+        "organization": "American College of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+        "publication_year": 2026,
+        "source_type": "professional_position_stand_overview_of_reviews",
+        "pmid": "41843416",
+        "doi": "10.1249/MSS.0000000000003897",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+      },
+      "tags": [
+        "progressive overload",
+        "progression",
+        "adaptation",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_012"
+    },
+    {
+      "id": "rt_013_core",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "A randomized trial comparing progression by increasing load with progression by increasing repetitions found that both approaches improved strength and muscle size over the study period, without a meaningful difference between them. Practical progression can therefore occur through load, repetitions, or other appropriate changes in training stimulus.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "progressive overload",
+        "load progression",
+        "rep progression",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_013"
+    },
+    {
+      "id": "rt_013_scope",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A randomized trial comparing progression by increasing load with progression by increasing repetitions found that both approaches improved strength and muscle size over the study period, without a meaningful difference between them. Practical progression can therefore occur through load, repetitions, or other appropriate changes in training stimulus.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "progressive overload",
+        "load progression",
+        "rep progression",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_013"
+    },
+    {
+      "id": "rt_013_boundary",
+      "topic": "progressive overload",
+      "population": "healthy adults",
+      "evidence_text": "A randomized trial comparing progression by increasing load with progression by increasing repetitions found that both approaches improved strength and muscle size over the study period, without a meaningful difference between them. Practical progression can therefore occur through load, repetitions, or other appropriate changes in training stimulus.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "progressive overload",
+        "load progression",
+        "rep progression",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_013"
+    },
+    {
+      "id": "rt_014_core",
+      "topic": "periodization",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review and meta-analysis found that periodized resistance training produced greater maximal-strength gains than non-periodized training when training volume was equated, while hypertrophy did not differ meaningfully between the approaches. Periodization is therefore more defensible as a strength-programming strategy than as a requirement for muscle growth.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "periodization",
+        "strength",
+        "hypertrophy",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_014"
+    },
+    {
+      "id": "rt_014_scope",
+      "topic": "periodization",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A systematic review and meta-analysis found that periodized resistance training produced greater maximal-strength gains than non-periodized training when training volume was equated, while hypertrophy did not differ meaningfully between the approaches. Periodization is therefore more defensible as a strength-programming strategy than as a requirement for muscle growth.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "periodization",
+        "strength",
+        "hypertrophy",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_014"
+    },
+    {
+      "id": "rt_014_boundary",
+      "topic": "periodization",
+      "population": "healthy adults",
+      "evidence_text": "A systematic review and meta-analysis found that periodized resistance training produced greater maximal-strength gains than non-periodized training when training volume was equated, while hypertrophy did not differ meaningfully between the approaches. Periodization is therefore more defensible as a strength-programming strategy than as a requirement for muscle growth.",
+      "source": {
+        "source_id": "Currier_RT_2023",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Brad S. Currier et al.",
+        "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+        "publication_year": 2023,
+        "source_type": "systematic_review_network_meta_analysis",
+        "pmid": "37414459",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+      },
+      "tags": [
+        "periodization",
+        "strength",
+        "hypertrophy",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_014"
+    },
+    {
+      "id": "rt_015_core",
+      "topic": "home and band resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Elastic resistance training is supported as a practical resistance-training method. A systematic review and meta-analysis found that elastic resistance exercise improves muscle strength and functional performance compared with passive control and is not clearly inferior to conventional resistance training for strength. This supports home training with bands when the exercises provide an adequate resistance stimulus.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "bands",
+        "elastic resistance",
+        "strength",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_015"
+    },
+    {
+      "id": "rt_015_scope",
+      "topic": "home and band resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Elastic resistance training is supported as a practical resistance-training method. A systematic review and meta-analysis found that elastic resistance exercise improves muscle strength and functional performance compared with passive control and is not clearly inferior to conventional resistance training for strength. This supports home training with bands when the exercises provide an adequate resistance stimulus.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "bands",
+        "elastic resistance",
+        "strength",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_015"
+    },
+    {
+      "id": "rt_015_boundary",
+      "topic": "home and band resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Elastic resistance training is supported as a practical resistance-training method. A systematic review and meta-analysis found that elastic resistance exercise improves muscle strength and functional performance compared with passive control and is not clearly inferior to conventional resistance training for strength. This supports home training with bands when the exercises provide an adequate resistance stimulus.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "bands",
+        "elastic resistance",
+        "strength",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_015"
+    },
+    {
+      "id": "rt_016_core",
+      "topic": "home resistance training",
+      "population": "older adults",
+      "evidence_text": "Systematic-review evidence in community-dwelling older adults indicates that unsupervised home-based resistance training can be feasible and can improve physical outcomes. Evidence from older adults should not be generalized automatically to young athletes, but it supports the broader principle that useful resistance training does not require a commercial gym.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "older adults",
+        "bodyweight",
+        "bands",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_016"
+    },
+    {
+      "id": "rt_016_scope",
+      "topic": "home resistance training",
+      "population": "older adults",
+      "evidence_text": "Scope/population: older adults. Systematic-review evidence in community-dwelling older adults indicates that unsupervised home-based resistance training can be feasible and can improve physical outcomes. Evidence from older adults should not be generalized automatically to young athletes, but it supports the broader principle that useful resistance training does not require a commercial gym.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "older adults",
+        "bodyweight",
+        "bands",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_016"
+    },
+    {
+      "id": "rt_016_boundary",
+      "topic": "home resistance training",
+      "population": "older adults",
+      "evidence_text": "Systematic-review evidence in community-dwelling older adults indicates that unsupervised home-based resistance training can be feasible and can improve physical outcomes. Evidence from older adults should not be generalized automatically to young athletes, but it supports the broader principle that useful resistance training does not require a commercial gym.",
+      "source": {
+        "source_id": "Elastic_RT_2017",
+        "organization": "Journal of Physical Activity and Health",
+        "authors": "Poliana Alves de Oliveira et al.",
+        "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+        "publication_year": 2017,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "28032811",
+        "doi": "10.1123/jpah.2016-0415",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+      },
+      "tags": [
+        "home training",
+        "older adults",
+        "bodyweight",
+        "bands",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rt_016"
+    },
+    {
+      "id": "nut_001_core",
+      "topic": "protein intake",
+      "population": "healthy exercising adults",
+      "evidence_text": "The ISSN position stand concludes that most exercising individuals can support training adaptations with total daily protein intake in the range of 1.4–2.0 g/kg/day. This range is for healthy exercising people and should not be presented as a universal medical prescription for everyone.",
+      "source": {
+        "source_id": "Protein_ISSN_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Jose Antonio et al.",
+        "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28642676",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28642676/"
+      },
+      "tags": [
+        "protein",
+        "muscle growth",
+        "daily protein",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_001"
+    },
+    {
+      "id": "nut_001_scope",
+      "topic": "protein intake",
+      "population": "healthy exercising adults",
+      "evidence_text": "Scope/population: healthy exercising adults. The ISSN position stand concludes that most exercising individuals can support training adaptations with total daily protein intake in the range of 1.4–2.0 g/kg/day. This range is for healthy exercising people and should not be presented as a universal medical prescription for everyone.",
+      "source": {
+        "source_id": "Protein_ISSN_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Jose Antonio et al.",
+        "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28642676",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28642676/"
+      },
+      "tags": [
+        "protein",
+        "muscle growth",
+        "daily protein",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_001"
+    },
+    {
+      "id": "nut_001_boundary",
+      "topic": "protein intake",
+      "population": "healthy exercising adults",
+      "evidence_text": "The ISSN position stand concludes that most exercising individuals can support training adaptations with total daily protein intake in the range of 1.4–2.0 g/kg/day. This range is for healthy exercising people and should not be presented as a universal medical prescription for everyone.",
+      "source": {
+        "source_id": "Protein_ISSN_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Jose Antonio et al.",
+        "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28642676",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28642676/"
+      },
+      "tags": [
+        "protein",
+        "muscle growth",
+        "daily protein",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_001"
+    },
+    {
+      "id": "nut_002_core",
+      "topic": "protein and resistance training",
+      "population": "healthy adults",
+      "evidence_text": "A large systematic review and meta-analysis found that protein supplementation modestly augments gains in fat-free mass, muscle size, and strength during prolonged resistance training. The practical implication is that adequate total protein matters, but supplementation is not inherently required if dietary protein intake is sufficient.",
+      "source": {
+        "source_id": "Protein_meta_2018",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Morton et al.",
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "publication_year": 2018,
+        "source_type": "systematic_review_meta_analysis_meta_regression",
+        "pmid": "28698222",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/"
+      },
+      "tags": [
+        "protein",
+        "supplement",
+        "muscle growth",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_002"
+    },
+    {
+      "id": "nut_002_scope",
+      "topic": "protein and resistance training",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A large systematic review and meta-analysis found that protein supplementation modestly augments gains in fat-free mass, muscle size, and strength during prolonged resistance training. The practical implication is that adequate total protein matters, but supplementation is not inherently required if dietary protein intake is sufficient.",
+      "source": {
+        "source_id": "Protein_meta_2018",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Morton et al.",
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "publication_year": 2018,
+        "source_type": "systematic_review_meta_analysis_meta_regression",
+        "pmid": "28698222",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/"
+      },
+      "tags": [
+        "protein",
+        "supplement",
+        "muscle growth",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_002"
+    },
+    {
+      "id": "nut_002_boundary",
+      "topic": "protein and resistance training",
+      "population": "healthy adults",
+      "evidence_text": "A large systematic review and meta-analysis found that protein supplementation modestly augments gains in fat-free mass, muscle size, and strength during prolonged resistance training. The practical implication is that adequate total protein matters, but supplementation is not inherently required if dietary protein intake is sufficient.",
+      "source": {
+        "source_id": "Protein_meta_2018",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Morton et al.",
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "publication_year": 2018,
+        "source_type": "systematic_review_meta_analysis_meta_regression",
+        "pmid": "28698222",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/"
+      },
+      "tags": [
+        "protein",
+        "supplement",
+        "muscle growth",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_002"
+    },
+    {
+      "id": "nut_003_core",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Recent systematic-review evidence directly comparing protein intake before versus after resistance exercise found no important effect of timing on changes in lean body mass. Earlier meta-analysis likewise found that total protein intake was a stronger predictor of hypertrophy than timing around the workout. The coach should therefore avoid claims that protein must be consumed within a narrow post-workout window.",
+      "source": {
+        "source_id": "Protein_timing_2025",
+        "organization": "Nutrients",
+        "authors": "Recent systematic review authors",
+        "title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis",
+        "publication_year": 2025,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "40647175",
+        "doi": "10.3390/nu17132070",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40647175/"
+      },
+      "tags": [
+        "protein timing",
+        "post-workout",
+        "meal timing",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_003"
+    },
+    {
+      "id": "nut_003_scope",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Recent systematic-review evidence directly comparing protein intake before versus after resistance exercise found no important effect of timing on changes in lean body mass. Earlier meta-analysis likewise found that total protein intake was a stronger predictor of hypertrophy than timing around the workout. The coach should therefore avoid claims that protein must be consumed within a narrow post-workout window.",
+      "source": {
+        "source_id": "Protein_timing_2025",
+        "organization": "Nutrients",
+        "authors": "Recent systematic review authors",
+        "title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis",
+        "publication_year": 2025,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "40647175",
+        "doi": "10.3390/nu17132070",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40647175/"
+      },
+      "tags": [
+        "protein timing",
+        "post-workout",
+        "meal timing",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_003"
+    },
+    {
+      "id": "nut_003_boundary",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Recent systematic-review evidence directly comparing protein intake before versus after resistance exercise found no important effect of timing on changes in lean body mass. Earlier meta-analysis likewise found that total protein intake was a stronger predictor of hypertrophy than timing around the workout. The coach should therefore avoid claims that protein must be consumed within a narrow post-workout window.",
+      "source": {
+        "source_id": "Protein_timing_2025",
+        "organization": "Nutrients",
+        "authors": "Recent systematic review authors",
+        "title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis",
+        "publication_year": 2025,
+        "source_type": "systematic_review_meta_analysis",
+        "pmid": "40647175",
+        "doi": "10.3390/nu17132070",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40647175/"
+      },
+      "tags": [
+        "protein timing",
+        "post-workout",
+        "meal timing",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_003"
+    },
+    {
+      "id": "nut_004_core",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Protein consumed before or after resistance exercise can support the exercise-induced muscle-protein-synthesis response, but chronic training evidence does not support a narrow anabolic window that makes a specific minute-by-minute timing rule necessary.",
+      "source": {
+        "source_id": "Protein_timing_2013",
+        "organization": "Journal of the International Society of Sports Nutrition",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+        "publication_year": 2013,
+        "source_type": "meta_analysis",
+        "pmid": "24299050",
+        "doi": "10.1186/1550-2783-10-53",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24299050/"
+      },
+      "tags": [
+        "protein timing",
+        "muscle protein synthesis",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_004"
+    },
+    {
+      "id": "nut_004_scope",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. Protein consumed before or after resistance exercise can support the exercise-induced muscle-protein-synthesis response, but chronic training evidence does not support a narrow anabolic window that makes a specific minute-by-minute timing rule necessary.",
+      "source": {
+        "source_id": "Protein_timing_2013",
+        "organization": "Journal of the International Society of Sports Nutrition",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+        "publication_year": 2013,
+        "source_type": "meta_analysis",
+        "pmid": "24299050",
+        "doi": "10.1186/1550-2783-10-53",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24299050/"
+      },
+      "tags": [
+        "protein timing",
+        "muscle protein synthesis",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_004"
+    },
+    {
+      "id": "nut_004_boundary",
+      "topic": "protein timing",
+      "population": "healthy adults",
+      "evidence_text": "Protein consumed before or after resistance exercise can support the exercise-induced muscle-protein-synthesis response, but chronic training evidence does not support a narrow anabolic window that makes a specific minute-by-minute timing rule necessary.",
+      "source": {
+        "source_id": "Protein_timing_2013",
+        "organization": "Journal of the International Society of Sports Nutrition",
+        "authors": "Brad J. Schoenfeld et al.",
+        "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+        "publication_year": 2013,
+        "source_type": "meta_analysis",
+        "pmid": "24299050",
+        "doi": "10.1186/1550-2783-10-53",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24299050/"
+      },
+      "tags": [
+        "protein timing",
+        "muscle protein synthesis",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "nut_004"
+    },
+    {
+      "id": "nut_005_core",
+      "topic": "protein during calorie restriction",
+      "population": "resistance-trained lean athletes",
+      "evidence_text": "During energy restriction, protein requirements may be higher for lean resistance-trained athletes than for exercising people in energy balance. A systematic review proposed approximately 2.3–3.1 g/kg fat-free mass/day for this specific population, scaled with the severity of restriction and leanness. This figure should not be generalized to the general population.",
+      "source": {
+        "source_id": "Protein_cut_2014",
+        "organization": "International Journal of Sport Nutrition and Exercise Metabolism",
+        "authors": "Eric R. Helms et al.",
+        "title": "A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes",
+        "publication_year": 2014,
+        "source_type": "systematic_review",
+        "pmid": "24092765",
+        "doi": "10.1123/ijsnem.2013-0054",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24092765/"
+      },
+      "tags": [
+        "protein",
+        "cutting",
+        "calorie deficit",
+        "athletes",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_005"
+    },
+    {
+      "id": "nut_005_scope",
+      "topic": "protein during calorie restriction",
+      "population": "resistance-trained lean athletes",
+      "evidence_text": "Scope/population: resistance-trained lean athletes. During energy restriction, protein requirements may be higher for lean resistance-trained athletes than for exercising people in energy balance. A systematic review proposed approximately 2.3–3.1 g/kg fat-free mass/day for this specific population, scaled with the severity of restriction and leanness. This figure should not be generalized to the general population.",
+      "source": {
+        "source_id": "Protein_cut_2014",
+        "organization": "International Journal of Sport Nutrition and Exercise Metabolism",
+        "authors": "Eric R. Helms et al.",
+        "title": "A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes",
+        "publication_year": 2014,
+        "source_type": "systematic_review",
+        "pmid": "24092765",
+        "doi": "10.1123/ijsnem.2013-0054",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24092765/"
+      },
+      "tags": [
+        "protein",
+        "cutting",
+        "calorie deficit",
+        "athletes",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_005"
+    },
+    {
+      "id": "nut_005_boundary",
+      "topic": "protein during calorie restriction",
+      "population": "resistance-trained lean athletes",
+      "evidence_text": "During energy restriction, protein requirements may be higher for lean resistance-trained athletes than for exercising people in energy balance. A systematic review proposed approximately 2.3–3.1 g/kg fat-free mass/day for this specific population, scaled with the severity of restriction and leanness. This figure should not be generalized to the general population.",
+      "source": {
+        "source_id": "Protein_cut_2014",
+        "organization": "International Journal of Sport Nutrition and Exercise Metabolism",
+        "authors": "Eric R. Helms et al.",
+        "title": "A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes",
+        "publication_year": 2014,
+        "source_type": "systematic_review",
+        "pmid": "24092765",
+        "doi": "10.1123/ijsnem.2013-0054",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24092765/"
+      },
+      "tags": [
+        "protein",
+        "cutting",
+        "calorie deficit",
+        "athletes",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "nut_005"
+    },
+    {
+      "id": "diet_001_core",
+      "topic": "healthy diet",
+      "population": "general population",
+      "evidence_text": "WHO and FAO describe healthy diets as patterns that support health, growth, development, activity, and prevention of nutrient deficiencies and chronic disease. The exact foods can vary with culture, preferences, availability, and individual needs; there is not one mandatory healthy diet pattern.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "healthy diet",
+        "food pattern",
+        "general population",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_001"
+    },
+    {
+      "id": "diet_001_scope",
+      "topic": "healthy diet",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. WHO and FAO describe healthy diets as patterns that support health, growth, development, activity, and prevention of nutrient deficiencies and chronic disease. The exact foods can vary with culture, preferences, availability, and individual needs; there is not one mandatory healthy diet pattern.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "healthy diet",
+        "food pattern",
+        "general population",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_001"
+    },
+    {
+      "id": "diet_001_boundary",
+      "topic": "healthy diet",
+      "population": "general population",
+      "evidence_text": "WHO and FAO describe healthy diets as patterns that support health, growth, development, activity, and prevention of nutrient deficiencies and chronic disease. The exact foods can vary with culture, preferences, availability, and individual needs; there is not one mandatory healthy diet pattern.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "healthy diet",
+        "food pattern",
+        "general population",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_001"
+    },
+    {
+      "id": "diet_002_core",
+      "topic": "fruit and vegetable intake",
+      "population": "general population",
+      "evidence_text": "WHO guidance recommends at least 400 g of vegetables and fruit per day for adults and children above age 10. This is a population-level public-health recommendation and should not be converted into a personalized prescription without considering the person's overall diet and circumstances.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "fruit",
+        "vegetables",
+        "healthy diet",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_002"
+    },
+    {
+      "id": "diet_002_scope",
+      "topic": "fruit and vegetable intake",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. WHO guidance recommends at least 400 g of vegetables and fruit per day for adults and children above age 10. This is a population-level public-health recommendation and should not be converted into a personalized prescription without considering the person's overall diet and circumstances.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "fruit",
+        "vegetables",
+        "healthy diet",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_002"
+    },
+    {
+      "id": "diet_002_boundary",
+      "topic": "fruit and vegetable intake",
+      "population": "general population",
+      "evidence_text": "WHO guidance recommends at least 400 g of vegetables and fruit per day for adults and children above age 10. This is a population-level public-health recommendation and should not be converted into a personalized prescription without considering the person's overall diet and circumstances.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "fruit",
+        "vegetables",
+        "healthy diet",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_002"
+    },
+    {
+      "id": "diet_003_core",
+      "topic": "free sugars",
+      "population": "general population",
+      "evidence_text": "WHO recommends limiting free sugars to less than 10% of total energy intake, with further benefit expected at about 5% or less. The recommendation concerns free sugars rather than naturally occurring sugars in intact fruit and other foods.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sugar",
+        "free sugars",
+        "healthy diet",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_003"
+    },
+    {
+      "id": "diet_003_scope",
+      "topic": "free sugars",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. WHO recommends limiting free sugars to less than 10% of total energy intake, with further benefit expected at about 5% or less. The recommendation concerns free sugars rather than naturally occurring sugars in intact fruit and other foods.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sugar",
+        "free sugars",
+        "healthy diet",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_003"
+    },
+    {
+      "id": "diet_003_boundary",
+      "topic": "free sugars",
+      "population": "general population",
+      "evidence_text": "WHO recommends limiting free sugars to less than 10% of total energy intake, with further benefit expected at about 5% or less. The recommendation concerns free sugars rather than naturally occurring sugars in intact fruit and other foods.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sugar",
+        "free sugars",
+        "healthy diet",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_003"
+    },
+    {
+      "id": "diet_004_core",
+      "topic": "sodium",
+      "population": "general population",
+      "evidence_text": "WHO recommends limiting sodium intake to less than 2 g per day, equivalent to less than 5 g of salt per day, as part of healthy-diet guidance.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sodium",
+        "salt",
+        "healthy diet",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_004"
+    },
+    {
+      "id": "diet_004_scope",
+      "topic": "sodium",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. WHO recommends limiting sodium intake to less than 2 g per day, equivalent to less than 5 g of salt per day, as part of healthy-diet guidance.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sodium",
+        "salt",
+        "healthy diet",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_004"
+    },
+    {
+      "id": "diet_004_boundary",
+      "topic": "sodium",
+      "population": "general population",
+      "evidence_text": "WHO recommends limiting sodium intake to less than 2 g per day, equivalent to less than 5 g of salt per day, as part of healthy-diet guidance.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_Web",
+        "organization": "World Health Organization",
+        "authors": "WHO",
+        "title": "Healthy diet",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/health-topics/healthy-diet"
+      },
+      "tags": [
+        "sodium",
+        "salt",
+        "healthy diet",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "diet_004"
+    },
+    {
+      "id": "diet_005_core",
+      "topic": "dietary fat",
+      "population": "general population",
+      "evidence_text": "Healthy diets should include sources of dietary fat while emphasizing overall dietary quality. For the general population, the coach should avoid imposing a very-low-fat diet without a specific evidence-based reason; fats are important for essential fatty acids and absorption of fat-soluble vitamins.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "dietary fat",
+        "fat",
+        "healthy diet",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_005"
+    },
+    {
+      "id": "diet_005_scope",
+      "topic": "dietary fat",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. Healthy diets should include sources of dietary fat while emphasizing overall dietary quality. For the general population, the coach should avoid imposing a very-low-fat diet without a specific evidence-based reason; fats are important for essential fatty acids and absorption of fat-soluble vitamins.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "dietary fat",
+        "fat",
+        "healthy diet",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_005"
+    },
+    {
+      "id": "diet_005_boundary",
+      "topic": "dietary fat",
+      "population": "general population",
+      "evidence_text": "Healthy diets should include sources of dietary fat while emphasizing overall dietary quality. For the general population, the coach should avoid imposing a very-low-fat diet without a specific evidence-based reason; fats are important for essential fatty acids and absorption of fat-soluble vitamins.",
+      "source": {
+        "source_id": "WHO_Healthy_Diet_2024",
+        "organization": "World Health Organization and Food and Agriculture Organization",
+        "authors": "WHO and FAO",
+        "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+        "publication_year": 2024,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.who.int/publications/i/item/9789240101876"
+      },
+      "tags": [
+        "dietary fat",
+        "fat",
+        "healthy diet",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_005"
+    },
+    {
+      "id": "diet_006_core",
+      "topic": "carbohydrates",
+      "population": "athletes and highly active people",
+      "evidence_text": "Sports-nutrition guidance identifies carbohydrate as an important fuel for high physical activity and for replenishing glycogen. Carbohydrate needs are context dependent and rise with training demand; the coach should not use an athlete carbohydrate target as if it were a universal requirement for a sedentary or lightly active person.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "carbohydrate",
+        "glycogen",
+        "sports nutrition",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_006"
+    },
+    {
+      "id": "diet_006_scope",
+      "topic": "carbohydrates",
+      "population": "athletes and highly active people",
+      "evidence_text": "Scope/population: athletes and highly active people. Sports-nutrition guidance identifies carbohydrate as an important fuel for high physical activity and for replenishing glycogen. Carbohydrate needs are context dependent and rise with training demand; the coach should not use an athlete carbohydrate target as if it were a universal requirement for a sedentary or lightly active person.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "carbohydrate",
+        "glycogen",
+        "sports nutrition",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_006"
+    },
+    {
+      "id": "diet_006_boundary",
+      "topic": "carbohydrates",
+      "population": "athletes and highly active people",
+      "evidence_text": "Sports-nutrition guidance identifies carbohydrate as an important fuel for high physical activity and for replenishing glycogen. Carbohydrate needs are context dependent and rise with training demand; the coach should not use an athlete carbohydrate target as if it were a universal requirement for a sedentary or lightly active person.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "carbohydrate",
+        "glycogen",
+        "sports nutrition",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_006"
+    },
+    {
+      "id": "diet_007_core",
+      "topic": "sports nutrition",
+      "population": "athletes",
+      "evidence_text": "The Academy of Nutrition and Dietetics, Dietitians of Canada, and ACSM position statement emphasizes matching food, fluid, and supplement strategies to the training and competition context. Athletes should receive individualized nutrition planning from a qualified sports dietitian or nutrition professional when performance demands or medical issues make generic advice insufficient.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports nutrition",
+        "athletes",
+        "dietitian",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_007"
+    },
+    {
+      "id": "diet_007_scope",
+      "topic": "sports nutrition",
+      "population": "athletes",
+      "evidence_text": "Scope/population: athletes. The Academy of Nutrition and Dietetics, Dietitians of Canada, and ACSM position statement emphasizes matching food, fluid, and supplement strategies to the training and competition context. Athletes should receive individualized nutrition planning from a qualified sports dietitian or nutrition professional when performance demands or medical issues make generic advice insufficient.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports nutrition",
+        "athletes",
+        "dietitian",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_007"
+    },
+    {
+      "id": "diet_007_boundary",
+      "topic": "sports nutrition",
+      "population": "athletes",
+      "evidence_text": "The Academy of Nutrition and Dietetics, Dietitians of Canada, and ACSM position statement emphasizes matching food, fluid, and supplement strategies to the training and competition context. Athletes should receive individualized nutrition planning from a qualified sports dietitian or nutrition professional when performance demands or medical issues make generic advice insufficient.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports nutrition",
+        "athletes",
+        "dietitian",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "diet_007"
+    },
+    {
+      "id": "diet_008_core",
+      "topic": "supplements",
+      "population": "athletes",
+      "evidence_text": "IOC consensus guidance states that only a limited number of supplements have good evidence for performance benefits, while some products can harm health, performance, or anti-doping status. Food-first nutrition and assessment of actual need should come before routine supplement recommendations.",
+      "source": {
+        "source_id": "IOC_supplements_2018",
+        "organization": "International Olympic Committee",
+        "authors": "Ronald J. Maughan et al.",
+        "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+        "publication_year": 2018,
+        "source_type": "consensus_statement",
+        "pmid": "29540367",
+        "doi": "10.1136/bjsports-2018-099027",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29540367/"
+      },
+      "tags": [
+        "supplements",
+        "athletes",
+        "sports nutrition",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not recommend supplements as necessary without an evidence-based indication; refer athletes to qualified nutrition professionals when appropriate.",
+      "derived_from": "diet_008"
+    },
+    {
+      "id": "diet_008_scope",
+      "topic": "supplements",
+      "population": "athletes",
+      "evidence_text": "Scope/population: athletes. IOC consensus guidance states that only a limited number of supplements have good evidence for performance benefits, while some products can harm health, performance, or anti-doping status. Food-first nutrition and assessment of actual need should come before routine supplement recommendations.",
+      "source": {
+        "source_id": "IOC_supplements_2018",
+        "organization": "International Olympic Committee",
+        "authors": "Ronald J. Maughan et al.",
+        "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+        "publication_year": 2018,
+        "source_type": "consensus_statement",
+        "pmid": "29540367",
+        "doi": "10.1136/bjsports-2018-099027",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29540367/"
+      },
+      "tags": [
+        "supplements",
+        "athletes",
+        "sports nutrition",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not recommend supplements as necessary without an evidence-based indication; refer athletes to qualified nutrition professionals when appropriate.",
+      "derived_from": "diet_008"
+    },
+    {
+      "id": "diet_008_boundary",
+      "topic": "supplements",
+      "population": "athletes",
+      "evidence_text": "Evidence boundary: Do not recommend supplements as necessary without an evidence-based indication; refer athletes to qualified nutrition professionals when appropriate.. IOC consensus guidance states that only a limited number of supplements have good evidence for performance benefits, while some products can harm health, performance, or anti-doping status. Food-first nutrition and assessment of actual need should come before routine supplement recommendations.",
+      "source": {
+        "source_id": "IOC_supplements_2018",
+        "organization": "International Olympic Committee",
+        "authors": "Ronald J. Maughan et al.",
+        "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+        "publication_year": 2018,
+        "source_type": "consensus_statement",
+        "pmid": "29540367",
+        "doi": "10.1136/bjsports-2018-099027",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29540367/"
+      },
+      "tags": [
+        "supplements",
+        "athletes",
+        "sports nutrition",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not recommend supplements as necessary without an evidence-based indication; refer athletes to qualified nutrition professionals when appropriate.",
+      "derived_from": "diet_008"
+    },
+    {
+      "id": "weight_001_core",
+      "topic": "weight loss",
+      "population": "general population",
+      "evidence_text": "CDC guidance states that healthy weight management combines healthy eating patterns, regular physical activity, adequate sleep, and stress management. It also notes that gradual, steady weight loss of about 1–2 lb per week is more likely to be maintained than faster loss for many people.",
+      "source": {
+        "source_id": "CDC_weight_2025",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Steps for Losing Weight",
+        "publication_year": 2025,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html"
+      },
+      "tags": [
+        "weight loss",
+        "calorie deficit",
+        "healthy weight",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "weight_001"
+    },
+    {
+      "id": "weight_001_scope",
+      "topic": "weight loss",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. CDC guidance states that healthy weight management combines healthy eating patterns, regular physical activity, adequate sleep, and stress management. It also notes that gradual, steady weight loss of about 1–2 lb per week is more likely to be maintained than faster loss for many people.",
+      "source": {
+        "source_id": "CDC_weight_2025",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Steps for Losing Weight",
+        "publication_year": 2025,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html"
+      },
+      "tags": [
+        "weight loss",
+        "calorie deficit",
+        "healthy weight",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "weight_001"
+    },
+    {
+      "id": "weight_001_boundary",
+      "topic": "weight loss",
+      "population": "general population",
+      "evidence_text": "CDC guidance states that healthy weight management combines healthy eating patterns, regular physical activity, adequate sleep, and stress management. It also notes that gradual, steady weight loss of about 1–2 lb per week is more likely to be maintained than faster loss for many people.",
+      "source": {
+        "source_id": "CDC_weight_2025",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Steps for Losing Weight",
+        "publication_year": 2025,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html"
+      },
+      "tags": [
+        "weight loss",
+        "calorie deficit",
+        "healthy weight",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "weight_001"
+    },
+    {
+      "id": "weight_002_core",
+      "topic": "weight loss and calorie balance",
+      "population": "general population",
+      "evidence_text": "CDC explains that reducing calorie intake together with physical activity creates an energy deficit that results in weight loss. The exact calorie intake required varies substantially between people, so the coach should not invent a calorie target without adequate individual information and an appropriate evidence basis.",
+      "source": {
+        "source_id": "CDC_activity_2026",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Physical Activity and Your Weight and Health",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/"
+      },
+      "tags": [
+        "weight loss",
+        "calories",
+        "energy deficit",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not fabricate a personalized calorie target from a generic formula when the available evidence or user data do not support it.",
+      "derived_from": "weight_002"
+    },
+    {
+      "id": "weight_002_scope",
+      "topic": "weight loss and calorie balance",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. CDC explains that reducing calorie intake together with physical activity creates an energy deficit that results in weight loss. The exact calorie intake required varies substantially between people, so the coach should not invent a calorie target without adequate individual information and an appropriate evidence basis.",
+      "source": {
+        "source_id": "CDC_activity_2026",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Physical Activity and Your Weight and Health",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/"
+      },
+      "tags": [
+        "weight loss",
+        "calories",
+        "energy deficit",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not fabricate a personalized calorie target from a generic formula when the available evidence or user data do not support it.",
+      "derived_from": "weight_002"
+    },
+    {
+      "id": "weight_002_boundary",
+      "topic": "weight loss and calorie balance",
+      "population": "general population",
+      "evidence_text": "Evidence boundary: Do not fabricate a personalized calorie target from a generic formula when the available evidence or user data do not support it.. CDC explains that reducing calorie intake together with physical activity creates an energy deficit that results in weight loss. The exact calorie intake required varies substantially between people, so the coach should not invent a calorie target without adequate individual information and an appropriate evidence basis.",
+      "source": {
+        "source_id": "CDC_activity_2026",
+        "organization": "Centers for Disease Control and Prevention",
+        "authors": "CDC",
+        "title": "Physical Activity and Your Weight and Health",
+        "publication_year": 2026,
+        "source_type": "authoritative_public_health_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/"
+      },
+      "tags": [
+        "weight loss",
+        "calories",
+        "energy deficit",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not fabricate a personalized calorie target from a generic formula when the available evidence or user data do not support it.",
+      "derived_from": "weight_002"
+    },
+    {
+      "id": "weight_003_core",
+      "topic": "body composition diets",
+      "population": "healthy adults",
+      "evidence_text": "ISSN guidance concludes that fat loss is driven by a sustained energy deficit and that a range of dietary patterns can improve body composition. Long-term adherence is a major determinant of success, so the coach should prioritize sustainable dietary patterns rather than claiming that one named diet is uniquely superior.",
+      "source": {
+        "source_id": "ISSN_body_comp_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Bill I. Campbell et al.",
+        "title": "International society of sports nutrition position stand: diets and body composition",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28630601",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28630601/"
+      },
+      "tags": [
+        "weight loss",
+        "diet pattern",
+        "calorie deficit",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "weight_003"
+    },
+    {
+      "id": "weight_003_scope",
+      "topic": "body composition diets",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. ISSN guidance concludes that fat loss is driven by a sustained energy deficit and that a range of dietary patterns can improve body composition. Long-term adherence is a major determinant of success, so the coach should prioritize sustainable dietary patterns rather than claiming that one named diet is uniquely superior.",
+      "source": {
+        "source_id": "ISSN_body_comp_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Bill I. Campbell et al.",
+        "title": "International society of sports nutrition position stand: diets and body composition",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28630601",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28630601/"
+      },
+      "tags": [
+        "weight loss",
+        "diet pattern",
+        "calorie deficit",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "weight_003"
+    },
+    {
+      "id": "weight_003_boundary",
+      "topic": "body composition diets",
+      "population": "healthy adults",
+      "evidence_text": "ISSN guidance concludes that fat loss is driven by a sustained energy deficit and that a range of dietary patterns can improve body composition. Long-term adherence is a major determinant of success, so the coach should prioritize sustainable dietary patterns rather than claiming that one named diet is uniquely superior.",
+      "source": {
+        "source_id": "ISSN_body_comp_2017",
+        "organization": "International Society of Sports Nutrition",
+        "authors": "Bill I. Campbell et al.",
+        "title": "International society of sports nutrition position stand: diets and body composition",
+        "publication_year": 2017,
+        "source_type": "professional_position_stand",
+        "pmid": "28630601",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28630601/"
+      },
+      "tags": [
+        "weight loss",
+        "diet pattern",
+        "calorie deficit",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "weight_003"
+    },
+    {
+      "id": "hydr_001_core",
+      "topic": "hydration",
+      "population": "general exercise",
+      "evidence_text": "ACSM guidance emphasizes that hydration needs vary substantially with sweat rate and sweat electrolyte losses. The goal during exercise is to avoid excessive dehydration and excessive changes in electrolyte balance, while recognizing that individualized fluid replacement is preferable to a single universal water target.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "water",
+        "sweat rate",
+        "electrolytes",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_001"
+    },
+    {
+      "id": "hydr_001_scope",
+      "topic": "hydration",
+      "population": "general exercise",
+      "evidence_text": "Scope/population: general exercise. ACSM guidance emphasizes that hydration needs vary substantially with sweat rate and sweat electrolyte losses. The goal during exercise is to avoid excessive dehydration and excessive changes in electrolyte balance, while recognizing that individualized fluid replacement is preferable to a single universal water target.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "water",
+        "sweat rate",
+        "electrolytes",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_001"
+    },
+    {
+      "id": "hydr_001_boundary",
+      "topic": "hydration",
+      "population": "general exercise",
+      "evidence_text": "ACSM guidance emphasizes that hydration needs vary substantially with sweat rate and sweat electrolyte losses. The goal during exercise is to avoid excessive dehydration and excessive changes in electrolyte balance, while recognizing that individualized fluid replacement is preferable to a single universal water target.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "water",
+        "sweat rate",
+        "electrolytes",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_001"
+    },
+    {
+      "id": "hydr_002_core",
+      "topic": "hydration during exercise",
+      "population": "exercise and sport",
+      "evidence_text": "During exercise, fluid intake should be guided by expected duration, environmental conditions, individual sweat rate, and the need to limit excessive body-water loss. ACSM specifically notes that excessive dehydration above roughly 2% of body mass can compromise performance and that customized fluid-replacement plans are appropriate.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "exercise",
+        "sweat rate",
+        "core"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "hydr_002"
+    },
+    {
+      "id": "hydr_002_scope",
+      "topic": "hydration during exercise",
+      "population": "exercise and sport",
+      "evidence_text": "Scope/population: exercise and sport. During exercise, fluid intake should be guided by expected duration, environmental conditions, individual sweat rate, and the need to limit excessive body-water loss. ACSM specifically notes that excessive dehydration above roughly 2% of body mass can compromise performance and that customized fluid-replacement plans are appropriate.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "exercise",
+        "sweat rate",
+        "scope"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "hydr_002"
+    },
+    {
+      "id": "hydr_002_boundary",
+      "topic": "hydration during exercise",
+      "population": "exercise and sport",
+      "evidence_text": "During exercise, fluid intake should be guided by expected duration, environmental conditions, individual sweat rate, and the need to limit excessive body-water loss. ACSM specifically notes that excessive dehydration above roughly 2% of body mass can compromise performance and that customized fluid-replacement plans are appropriate.",
+      "source": {
+        "source_id": "ACSM_fluid_2007",
+        "organization": "American College of Sports Medicine",
+        "authors": "Michael N. Sawka et al.",
+        "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+        "publication_year": 2007,
+        "source_type": "professional_position_stand",
+        "pmid": "17277604",
+        "doi": "10.1249/mss.0b013e31802ca597",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+      },
+      "tags": [
+        "hydration",
+        "exercise",
+        "sweat rate",
+        "boundary"
+      ],
+      "quantitative_claims_present": true,
+      "safety_boundary": null,
+      "derived_from": "hydr_002"
+    },
+    {
+      "id": "hydr_003_core",
+      "topic": "sports hydration",
+      "population": "athletes",
+      "evidence_text": "For longer or demanding exercise, fluids containing electrolytes and carbohydrate can provide benefits over water alone in some circumstances. The need depends on exercise duration, sweat losses, environmental conditions, and the athlete's nutrition strategy; ordinary short workouts do not automatically require sports drinks.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports drink",
+        "electrolytes",
+        "carbohydrate",
+        "hydration",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_003"
+    },
+    {
+      "id": "hydr_003_scope",
+      "topic": "sports hydration",
+      "population": "athletes",
+      "evidence_text": "Scope/population: athletes. For longer or demanding exercise, fluids containing electrolytes and carbohydrate can provide benefits over water alone in some circumstances. The need depends on exercise duration, sweat losses, environmental conditions, and the athlete's nutrition strategy; ordinary short workouts do not automatically require sports drinks.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports drink",
+        "electrolytes",
+        "carbohydrate",
+        "hydration",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_003"
+    },
+    {
+      "id": "hydr_003_boundary",
+      "topic": "sports hydration",
+      "population": "athletes",
+      "evidence_text": "For longer or demanding exercise, fluids containing electrolytes and carbohydrate can provide benefits over water alone in some circumstances. The need depends on exercise duration, sweat losses, environmental conditions, and the athlete's nutrition strategy; ordinary short workouts do not automatically require sports drinks.",
+      "source": {
+        "source_id": "ACSM_sport_nutrition_2016",
+        "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+        "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+        "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+        "publication_year": 2016,
+        "source_type": "professional_position_stand",
+        "pmid": "26920240",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+      },
+      "tags": [
+        "sports drink",
+        "electrolytes",
+        "carbohydrate",
+        "hydration",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "hydr_003"
+    },
+    {
+      "id": "rec_001_core",
+      "topic": "sleep and recovery",
+      "population": "athletes",
+      "evidence_text": "Expert consensus on athlete sleep recommends an individualized approach rather than assuming that one sleep duration fits every athlete. Habitually short sleep is common in athletes and is associated with concerns for health and performance; sleep education and screening can help identify athletes who need additional support.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "athletes",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rec_001"
+    },
+    {
+      "id": "rec_001_scope",
+      "topic": "sleep and recovery",
+      "population": "athletes",
+      "evidence_text": "Scope/population: athletes. Expert consensus on athlete sleep recommends an individualized approach rather than assuming that one sleep duration fits every athlete. Habitually short sleep is common in athletes and is associated with concerns for health and performance; sleep education and screening can help identify athletes who need additional support.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "athletes",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rec_001"
+    },
+    {
+      "id": "rec_001_boundary",
+      "topic": "sleep and recovery",
+      "population": "athletes",
+      "evidence_text": "Expert consensus on athlete sleep recommends an individualized approach rather than assuming that one sleep duration fits every athlete. Habitually short sleep is common in athletes and is associated with concerns for health and performance; sleep education and screening can help identify athletes who need additional support.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "athletes",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "rec_001"
+    },
+    {
+      "id": "rec_002_core",
+      "topic": "sleep and recovery",
+      "population": "adults",
+      "evidence_text": "Sleep is an important part of recovery and performance. The coach should avoid presenting a rigid sleep number as universally optimal; instead, assess sleep quality, perceived need, training load, and persistent daytime impairment, and refer persistent sleep problems to an appropriate health professional.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "fatigue",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Persistent insomnia, suspected sleep disorders, or severe daytime sleepiness require clinical evaluation rather than workout optimization alone.",
+      "derived_from": "rec_002"
+    },
+    {
+      "id": "rec_002_scope",
+      "topic": "sleep and recovery",
+      "population": "adults",
+      "evidence_text": "Scope/population: adults. Sleep is an important part of recovery and performance. The coach should avoid presenting a rigid sleep number as universally optimal; instead, assess sleep quality, perceived need, training load, and persistent daytime impairment, and refer persistent sleep problems to an appropriate health professional.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "fatigue",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Persistent insomnia, suspected sleep disorders, or severe daytime sleepiness require clinical evaluation rather than workout optimization alone.",
+      "derived_from": "rec_002"
+    },
+    {
+      "id": "rec_002_boundary",
+      "topic": "sleep and recovery",
+      "population": "adults",
+      "evidence_text": "Evidence boundary: Persistent insomnia, suspected sleep disorders, or severe daytime sleepiness require clinical evaluation rather than workout optimization alone.. Sleep is an important part of recovery and performance. The coach should avoid presenting a rigid sleep number as universally optimal; instead, assess sleep quality, perceived need, training load, and persistent daytime impairment, and refer persistent sleep problems to an appropriate health professional.",
+      "source": {
+        "source_id": "Sleep_consensus_2021",
+        "organization": "British Journal of Sports Medicine",
+        "authors": "Cheri Mah et al. / expert consensus group",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "publication_year": 2021,
+        "source_type": "expert_consensus",
+        "pmid": "33144349",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+      },
+      "tags": [
+        "sleep",
+        "recovery",
+        "fatigue",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Persistent insomnia, suspected sleep disorders, or severe daytime sleepiness require clinical evaluation rather than workout optimization alone.",
+      "derived_from": "rec_002"
+    },
+    {
+      "id": "safe_001_core",
+      "topic": "exercise safety",
+      "population": "healthy adults",
+      "evidence_text": "A 2023 systematic review of resistance-training injury literature found that traditional strength training had lower reported injury rates than several high-intensity or strength-sport modalities, while also emphasizing limited study quality and difficulty generalizing across methods. The coach should therefore favor controlled, appropriately progressed resistance exercise and avoid claiming that any exercise is risk-free.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "safety",
+        "injury prevention",
+        "resistance training",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "safe_001"
+    },
+    {
+      "id": "safe_001_scope",
+      "topic": "exercise safety",
+      "population": "healthy adults",
+      "evidence_text": "Scope/population: healthy adults. A 2023 systematic review of resistance-training injury literature found that traditional strength training had lower reported injury rates than several high-intensity or strength-sport modalities, while also emphasizing limited study quality and difficulty generalizing across methods. The coach should therefore favor controlled, appropriately progressed resistance exercise and avoid claiming that any exercise is risk-free.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "safety",
+        "injury prevention",
+        "resistance training",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "safe_001"
+    },
+    {
+      "id": "safe_001_boundary",
+      "topic": "exercise safety",
+      "population": "healthy adults",
+      "evidence_text": "A 2023 systematic review of resistance-training injury literature found that traditional strength training had lower reported injury rates than several high-intensity or strength-sport modalities, while also emphasizing limited study quality and difficulty generalizing across methods. The coach should therefore favor controlled, appropriately progressed resistance exercise and avoid claiming that any exercise is risk-free.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "safety",
+        "injury prevention",
+        "resistance training",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": null,
+      "derived_from": "safe_001"
+    },
+    {
+      "id": "safe_002_core",
+      "topic": "exercise screening",
+      "population": "general population",
+      "evidence_text": "ACSM preparticipation screening is intended to identify people at elevated risk for exercise-related cardiovascular events. Exercise is safe for most people, but warning signs and symptoms can precede cardiovascular events. A fitness coach should screen appropriately and escalate concerning symptoms rather than attempting to diagnose them.",
+      "source": {
+        "source_id": "ACSM_screening_2015",
+        "organization": "American College of Sports Medicine",
+        "authors": "ACSM Scientific Roundtable",
+        "title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+        "publication_year": 2015,
+        "source_type": "professional_guidance",
+        "pmid": "26473759",
+        "doi": "10.1249/MSS.0000000000000664",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26473759/"
+      },
+      "tags": [
+        "safety",
+        "screening",
+        "cardiovascular",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not diagnose cardiovascular or medical conditions. Concerning symptoms require stopping or modifying activity and appropriate medical evaluation.",
+      "derived_from": "safe_002"
+    },
+    {
+      "id": "safe_002_scope",
+      "topic": "exercise screening",
+      "population": "general population",
+      "evidence_text": "Scope/population: general population. ACSM preparticipation screening is intended to identify people at elevated risk for exercise-related cardiovascular events. Exercise is safe for most people, but warning signs and symptoms can precede cardiovascular events. A fitness coach should screen appropriately and escalate concerning symptoms rather than attempting to diagnose them.",
+      "source": {
+        "source_id": "ACSM_screening_2015",
+        "organization": "American College of Sports Medicine",
+        "authors": "ACSM Scientific Roundtable",
+        "title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+        "publication_year": 2015,
+        "source_type": "professional_guidance",
+        "pmid": "26473759",
+        "doi": "10.1249/MSS.0000000000000664",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26473759/"
+      },
+      "tags": [
+        "safety",
+        "screening",
+        "cardiovascular",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not diagnose cardiovascular or medical conditions. Concerning symptoms require stopping or modifying activity and appropriate medical evaluation.",
+      "derived_from": "safe_002"
+    },
+    {
+      "id": "safe_002_boundary",
+      "topic": "exercise screening",
+      "population": "general population",
+      "evidence_text": "Evidence boundary: Do not diagnose cardiovascular or medical conditions. Concerning symptoms require stopping or modifying activity and appropriate medical evaluation.. ACSM preparticipation screening is intended to identify people at elevated risk for exercise-related cardiovascular events. Exercise is safe for most people, but warning signs and symptoms can precede cardiovascular events. A fitness coach should screen appropriately and escalate concerning symptoms rather than attempting to diagnose them.",
+      "source": {
+        "source_id": "ACSM_screening_2015",
+        "organization": "American College of Sports Medicine",
+        "authors": "ACSM Scientific Roundtable",
+        "title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+        "publication_year": 2015,
+        "source_type": "professional_guidance",
+        "pmid": "26473759",
+        "doi": "10.1249/MSS.0000000000000664",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26473759/"
+      },
+      "tags": [
+        "safety",
+        "screening",
+        "cardiovascular",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Do not diagnose cardiovascular or medical conditions. Concerning symptoms require stopping or modifying activity and appropriate medical evaluation.",
+      "derived_from": "safe_002"
+    },
+    {
+      "id": "safe_003_core",
+      "topic": "exercise with pain or injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Injury and pain situations require a different evidence boundary from ordinary fitness advice. NHS guidance for acute sprains and strains advises stopping the provoking activity initially and seeking professional advice when appropriate. The coach should not diagnose an injury, prescribe rehabilitation, or tell a user to push through significant or worsening pain.",
+      "source": {
+        "source_id": "NHS_injury",
+        "organization": "National Health Service",
+        "authors": "NHS",
+        "title": "Sprains and strains",
+        "publication_year": 2024,
+        "source_type": "authoritative_clinical_public_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+      },
+      "tags": [
+        "pain",
+        "injury",
+        "medical boundary",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "No diagnosis or individualized rehabilitation. Escalate significant, worsening, unexplained, or persistent pain and acute injury to a qualified healthcare professional.",
+      "derived_from": "safe_003"
+    },
+    {
+      "id": "safe_003_scope",
+      "topic": "exercise with pain or injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Scope/population: injured or symptomatic people. Injury and pain situations require a different evidence boundary from ordinary fitness advice. NHS guidance for acute sprains and strains advises stopping the provoking activity initially and seeking professional advice when appropriate. The coach should not diagnose an injury, prescribe rehabilitation, or tell a user to push through significant or worsening pain.",
+      "source": {
+        "source_id": "NHS_injury",
+        "organization": "National Health Service",
+        "authors": "NHS",
+        "title": "Sprains and strains",
+        "publication_year": 2024,
+        "source_type": "authoritative_clinical_public_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+      },
+      "tags": [
+        "pain",
+        "injury",
+        "medical boundary",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "No diagnosis or individualized rehabilitation. Escalate significant, worsening, unexplained, or persistent pain and acute injury to a qualified healthcare professional.",
+      "derived_from": "safe_003"
+    },
+    {
+      "id": "safe_003_boundary",
+      "topic": "exercise with pain or injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Evidence boundary: No diagnosis or individualized rehabilitation. Escalate significant, worsening, unexplained, or persistent pain and acute injury to a qualified healthcare professional.. Injury and pain situations require a different evidence boundary from ordinary fitness advice. NHS guidance for acute sprains and strains advises stopping the provoking activity initially and seeking professional advice when appropriate. The coach should not diagnose an injury, prescribe rehabilitation, or tell a user to push through significant or worsening pain.",
+      "source": {
+        "source_id": "NHS_injury",
+        "organization": "National Health Service",
+        "authors": "NHS",
+        "title": "Sprains and strains",
+        "publication_year": 2024,
+        "source_type": "authoritative_clinical_public_guidance",
+        "pmid": null,
+        "doi": null,
+        "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+      },
+      "tags": [
+        "pain",
+        "injury",
+        "medical boundary",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "No diagnosis or individualized rehabilitation. Escalate significant, worsening, unexplained, or persistent pain and acute injury to a qualified healthcare professional.",
+      "derived_from": "safe_003"
+    },
+    {
+      "id": "safe_004_core",
+      "topic": "exercise with injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Exercise can be therapeutic in some diagnosed musculoskeletal conditions, but rehabilitation programs are condition-specific. Evidence that resistance training can help some musculoskeletal conditions does not justify giving a generic injured person a diagnosis or a rehabilitation protocol.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "injury",
+        "rehabilitation",
+        "medical boundary",
+        "core"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Use general safety boundaries only; condition-specific exercise selection belongs to qualified clinical care.",
+      "derived_from": "safe_004"
+    },
+    {
+      "id": "safe_004_scope",
+      "topic": "exercise with injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Scope/population: injured or symptomatic people. Exercise can be therapeutic in some diagnosed musculoskeletal conditions, but rehabilitation programs are condition-specific. Evidence that resistance training can help some musculoskeletal conditions does not justify giving a generic injured person a diagnosis or a rehabilitation protocol.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "injury",
+        "rehabilitation",
+        "medical boundary",
+        "scope"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Use general safety boundaries only; condition-specific exercise selection belongs to qualified clinical care.",
+      "derived_from": "safe_004"
+    },
+    {
+      "id": "safe_004_boundary",
+      "topic": "exercise with injury",
+      "population": "injured or symptomatic people",
+      "evidence_text": "Evidence boundary: Use general safety boundaries only; condition-specific exercise selection belongs to qualified clinical care.. Exercise can be therapeutic in some diagnosed musculoskeletal conditions, but rehabilitation programs are condition-specific. Evidence that resistance training can help some musculoskeletal conditions does not justify giving a generic injured person a diagnosis or a rehabilitation protocol.",
+      "source": {
+        "source_id": "Safety_RT_2023",
+        "organization": "Journal of Orthopaedic Surgery and Research",
+        "authors": "Systematic review authors",
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "publication_year": 2023,
+        "source_type": "systematic_review",
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+      },
+      "tags": [
+        "injury",
+        "rehabilitation",
+        "medical boundary",
+        "boundary"
+      ],
+      "quantitative_claims_present": false,
+      "safety_boundary": "Use general safety boundaries only; condition-specific exercise selection belongs to qualified clinical care.",
+      "derived_from": "safe_004"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ACSM_RT_2026",
+      "organization": "American College of Sports Medicine",
+      "authors": "Brad S. Currier et al.",
+      "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+      "year": 2026,
+      "source_type": "professional_position_stand_overview_of_reviews",
+      "pmid": "41843416",
+      "doi": "10.1249/MSS.0000000000003897",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+    },
+    {
+      "source_id": "Currier_RT_2023",
+      "organization": "British Journal of Sports Medicine",
+      "authors": "Brad S. Currier et al.",
+      "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+      "year": 2023,
+      "source_type": "systematic_review_network_meta_analysis",
+      "pmid": "37414459",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37414459/"
+    },
+    {
+      "source_id": "Schoenfeld_volume_2017",
+      "organization": "Journal of Sports Sciences",
+      "authors": "Brad J. Schoenfeld et al.",
+      "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: a systematic review and meta-analysis",
+      "year": 2017,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "27433992",
+      "doi": "10.1080/02640414.2016.1210197",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/"
+    },
+    {
+      "source_id": "Grgic_frequency_2018",
+      "organization": "Sports Medicine",
+      "authors": "Jozo Grgic et al.",
+      "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis",
+      "year": 2019,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "30558493",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30558493/"
+    },
+    {
+      "source_id": "Schoenfeld_load_2021",
+      "organization": "Journal of Sports Sciences",
+      "authors": "Brad J. Schoenfeld et al.",
+      "title": "Influence of resistance training load on measures of skeletal muscle hypertrophy and improvements in maximal strength and neuromuscular task performance: a systematic review and meta-analysis",
+      "year": 2021,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "33874848",
+      "doi": "10.1080/02640414.2021.1898094",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33874848/"
+    },
+    {
+      "source_id": "Refalo_failure_2023",
+      "organization": "Sports Medicine",
+      "authors": "Martin C. Refalo et al.",
+      "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+      "year": 2023,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "36334240",
+      "doi": "10.1007/s40279-022-01784-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36334240/"
+    },
+    {
+      "source_id": "Robinson_RIR_2024",
+      "organization": "Sports Medicine",
+      "authors": "Zac P. Robinson et al.",
+      "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+      "year": 2024,
+      "source_type": "meta_regression",
+      "pmid": "38970765",
+      "doi": "10.1007/s40279-024-02069-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/"
+    },
+    {
+      "source_id": "Grgic_rest_2024",
+      "organization": "Frontiers in Sports and Active Living",
+      "authors": "Alec Singer et al.",
+      "title": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+      "year": 2024,
+      "source_type": "systematic_review_bayesian_meta_analysis",
+      "pmid": "39205815",
+      "doi": "10.3389/fspor.2024.1429789",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39205815/"
+    },
+    {
+      "source_id": "Hammert_progression_2024",
+      "organization": "Physiological Measurement",
+      "authors": "William B. Hammert et al.",
+      "title": "Progression of total training volume in resistance training studies and its application to skeletal muscle growth",
+      "year": 2024,
+      "source_type": "peer_reviewed_review",
+      "pmid": "39178897",
+      "doi": "10.1088/1361-6579/ad7348",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39178897/"
+    },
+    {
+      "source_id": "ACSM_progression_2009",
+      "organization": "American College of Sports Medicine",
+      "authors": "William J. Kraemer et al.",
+      "title": "Progression models in resistance training for healthy adults",
+      "year": 2009,
+      "source_type": "professional_position_stand",
+      "pmid": "19204579",
+      "doi": "10.1249/MSS.0b013e3181915670",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/"
+    },
+    {
+      "source_id": "Elastic_RT_2017",
+      "organization": "Journal of Physical Activity and Health",
+      "authors": "Poliana Alves de Oliveira et al.",
+      "title": "Effects of Elastic Resistance Exercise on Muscle Strength and Functional Performance in Healthy Adults: A Systematic Review and Meta-Analysis",
+      "year": 2017,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "28032811",
+      "doi": "10.1123/jpah.2016-0415",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28032811/"
+    },
+    {
+      "source_id": "Protein_ISSN_2017",
+      "organization": "International Society of Sports Nutrition",
+      "authors": "Jose Antonio et al.",
+      "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+      "year": 2017,
+      "source_type": "professional_position_stand",
+      "pmid": "28642676",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28642676/"
+    },
+    {
+      "source_id": "Protein_meta_2018",
+      "organization": "British Journal of Sports Medicine",
+      "authors": "Morton et al.",
+      "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+      "year": 2018,
+      "source_type": "systematic_review_meta_analysis_meta_regression",
+      "pmid": "28698222",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/"
+    },
+    {
+      "source_id": "Protein_timing_2025",
+      "organization": "Nutrients",
+      "authors": "Recent systematic review authors",
+      "title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis",
+      "year": 2025,
+      "source_type": "systematic_review_meta_analysis",
+      "pmid": "40647175",
+      "doi": "10.3390/nu17132070",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40647175/"
+    },
+    {
+      "source_id": "Protein_timing_2013",
+      "organization": "Journal of the International Society of Sports Nutrition",
+      "authors": "Brad J. Schoenfeld et al.",
+      "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+      "year": 2013,
+      "source_type": "meta_analysis",
+      "pmid": "24299050",
+      "doi": "10.1186/1550-2783-10-53",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24299050/"
+    },
+    {
+      "source_id": "Protein_cut_2014",
+      "organization": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "authors": "Eric R. Helms et al.",
+      "title": "A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes",
+      "year": 2014,
+      "source_type": "systematic_review",
+      "pmid": "24092765",
+      "doi": "10.1123/ijsnem.2013-0054",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24092765/"
+    },
+    {
+      "source_id": "WHO_Healthy_Diet_2024",
+      "organization": "World Health Organization and Food and Agriculture Organization",
+      "authors": "WHO and FAO",
+      "title": "What are healthy diets? Joint statement by the Food and Agriculture Organization of the United Nations and the World Health Organization",
+      "year": 2024,
+      "source_type": "authoritative_public_health_guidance",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.who.int/publications/i/item/9789240101876"
+    },
+    {
+      "source_id": "WHO_Healthy_Diet_Web",
+      "organization": "World Health Organization",
+      "authors": "WHO",
+      "title": "Healthy diet",
+      "year": 2026,
+      "source_type": "authoritative_public_health_guidance",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.who.int/health-topics/healthy-diet"
+    },
+    {
+      "source_id": "WHO_PA_2020",
+      "organization": "World Health Organization",
+      "authors": "WHO",
+      "title": "WHO guidelines on physical activity and sedentary behaviour",
+      "year": 2020,
+      "source_type": "public_health_guideline",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.who.int/publications/b/55518"
+    },
+    {
+      "source_id": "CDC_weight_2025",
+      "organization": "Centers for Disease Control and Prevention",
+      "authors": "CDC",
+      "title": "Steps for Losing Weight",
+      "year": 2025,
+      "source_type": "authoritative_public_health_guidance",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html"
+    },
+    {
+      "source_id": "CDC_activity_2026",
+      "organization": "Centers for Disease Control and Prevention",
+      "authors": "CDC",
+      "title": "Physical Activity and Your Weight and Health",
+      "year": 2026,
+      "source_type": "authoritative_public_health_guidance",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cdc.gov/healthy-weight-growth/physical-activity/"
+    },
+    {
+      "source_id": "ACSM_fluid_2007",
+      "organization": "American College of Sports Medicine",
+      "authors": "Michael N. Sawka et al.",
+      "title": "American College of Sports Medicine position stand. Exercise and fluid replacement",
+      "year": 2007,
+      "source_type": "professional_position_stand",
+      "pmid": "17277604",
+      "doi": "10.1249/mss.0b013e31802ca597",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/"
+    },
+    {
+      "source_id": "ACSM_sport_nutrition_2016",
+      "organization": "Academy of Nutrition and Dietetics, Dietitians of Canada, and American College of Sports Medicine",
+      "authors": "Academy of Nutrition and Dietetics, Dietitians of Canada, ACSM",
+      "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+      "year": 2016,
+      "source_type": "professional_position_stand",
+      "pmid": "26920240",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26920240/"
+    },
+    {
+      "source_id": "ISSN_body_comp_2017",
+      "organization": "International Society of Sports Nutrition",
+      "authors": "Bill I. Campbell et al.",
+      "title": "International society of sports nutrition position stand: diets and body composition",
+      "year": 2017,
+      "source_type": "professional_position_stand",
+      "pmid": "28630601",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28630601/"
+    },
+    {
+      "source_id": "IOC_supplements_2018",
+      "organization": "International Olympic Committee",
+      "authors": "Ronald J. Maughan et al.",
+      "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+      "year": 2018,
+      "source_type": "consensus_statement",
+      "pmid": "29540367",
+      "doi": "10.1136/bjsports-2018-099027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29540367/"
+    },
+    {
+      "source_id": "Sleep_consensus_2021",
+      "organization": "British Journal of Sports Medicine",
+      "authors": "Cheri Mah et al. / expert consensus group",
+      "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+      "year": 2021,
+      "source_type": "expert_consensus",
+      "pmid": "33144349",
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33144349/"
+    },
+    {
+      "source_id": "Safety_RT_2023",
+      "organization": "Journal of Orthopaedic Surgery and Research",
+      "authors": "Systematic review authors",
+      "title": "Which resistance training is safest to practice? A systematic review",
+      "year": 2023,
+      "source_type": "systematic_review",
+      "pmid": "37046275",
+      "doi": "10.1186/s13018-023-03781-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37046275/"
+    },
+    {
+      "source_id": "ACSM_screening_2015",
+      "organization": "American College of Sports Medicine",
+      "authors": "ACSM Scientific Roundtable",
+      "title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+      "year": 2015,
+      "source_type": "professional_guidance",
+      "pmid": "26473759",
+      "doi": "10.1249/MSS.0000000000000664",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26473759/"
+    },
+    {
+      "source_id": "NHS_injury",
+      "organization": "National Health Service",
+      "authors": "NHS",
+      "title": "Sprains and strains",
+      "year": 2024,
+      "source_type": "authoritative_clinical_public_guidance",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+    }
+  ]
+}
