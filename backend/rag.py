@@ -11,6 +11,14 @@ from google import genai
 from google.genai import errors, types
 from datetime import datetime, timezone
 
+from session_context import (
+    Condition,
+    POLICY_RELIABILITY,
+    parse_summary as parse_session_summary,
+    render_session_block,
+    retrieval_queries as session_retrieval_queries,
+)
+
 
 def _log_rag(stage: str, message: str, **kwargs):
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
@@ -585,9 +593,19 @@ def ask_rag(
     question,
     profile=None,
     return_metadata=False,
+    session=None,
 ):
     t_ask_start = time.time()
     _log_rag("ASK_RAG_START", f"Processing question: '{question[:80]}'")
+
+    # Optional reliability summary of the user's last workout (see session_context.py).
+    # An invalid summary is ignored rather than failing the request.
+    session_summary = None
+    if session:
+        try:
+            session_summary = parse_session_summary(session)
+        except Exception as err:  # noqa: BLE001
+            _log_rag("SESSION_INVALID", f"Ignoring invalid session summary: {err}")
 
     # --------------------------------------------------
     # RETRIEVE
@@ -599,6 +617,16 @@ def ask_rag(
         min_score=0.40,
         return_timings=True,
     )
+
+    # Add evidence for problems the camera observed reliably (never for unobservable ones)
+    if session_summary is not None:
+        seen = {r.get("derived_from") for r in results}
+        for extra_query in session_retrieval_queries(session_summary):
+            extra = retrieve(extra_query, k=3, min_score=0.40)
+            for r in extra:
+                if r.get("derived_from") not in seen and len(results) < 7:
+                    results.append(r)
+                    seen.add(r.get("derived_from"))
 
 
     # --------------------------------------------------
@@ -642,6 +670,16 @@ def ask_rag(
     # GROUNDED PROMPT
     # --------------------------------------------------
 
+    session_section = ""
+    if session_summary is not None:
+        session_section = (
+            "==================================================\n"
+            "MEASURED WORKOUT (FROM THE CAMERA)\n"
+            "==================================================\n\n"
+            + render_session_block(session_summary, Condition.RELIABILITY)
+            + "\n\n" + POLICY_RELIABILITY + "\n\n"
+        )
+
     prompt = f"""
 You are an evidence-grounded AI fitness coach.
 
@@ -661,6 +699,7 @@ USER PROFILE
 {user_profile}
 
 
+{session_section}
 ==================================================
 RETRIEVED PUBLISHED EVIDENCE
 ==================================================

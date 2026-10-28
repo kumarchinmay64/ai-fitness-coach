@@ -1,0 +1,357 @@
+{
+  "yaw0": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "front",
+    "camera_yaw_deg": 7,
+    "attempts": 5,
+    "reps_counted": 0,
+    "possible_uncounted_attempts": 5,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view",
+          "unstable"
+        ],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view"
+        ],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw10": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "front",
+    "camera_yaw_deg": 14,
+    "attempts": 5,
+    "reps_counted": 0,
+    "possible_uncounted_attempts": 5,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view",
+          "unstable"
+        ],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view"
+        ],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw20": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "front",
+    "camera_yaw_deg": 22,
+    "attempts": 5,
+    "reps_counted": 0,
+    "possible_uncounted_attempts": 5,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view",
+          "unstable"
+        ],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 0,
+        "not_observable": 5,
+        "main_reasons": [
+          "camera_view",
+          "unstable"
+        ],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw30": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "oblique",
+    "camera_yaw_deg": 33,
+    "attempts": 5,
+    "reps_counted": 0,
+    "possible_uncounted_attempts": 5,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 5,
+        "analyzer_passed": 0,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 5,
+        "not_observable": 0,
+        "main_reasons": [
+          "camera_view_partial"
+        ],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 5,
+        "not_observable": 0,
+        "main_reasons": [
+          "camera_view_partial"
+        ],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw40": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "oblique",
+    "camera_yaw_deg": 43,
+    "attempts": 5,
+    "reps_counted": 2,
+    "possible_uncounted_attempts": 3,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 3,
+        "analyzer_passed": 2,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 5,
+        "not_observable": 0,
+        "main_reasons": [
+          "camera_view_partial",
+          "borderline"
+        ],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 0,
+        "uncertain": 5,
+        "not_observable": 0,
+        "main_reasons": [
+          "camera_view_partial"
+        ],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw50": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "oblique",
+    "camera_yaw_deg": 52,
+    "attempts": 5,
+    "reps_counted": 5,
+    "possible_uncounted_attempts": 0,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw60": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "oblique",
+    "camera_yaw_deg": 62,
+    "attempts": 5,
+    "reps_counted": 5,
+    "possible_uncounted_attempts": 0,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw70": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "side",
+    "camera_yaw_deg": 71,
+    "attempts": 5,
+    "reps_counted": 5,
+    "possible_uncounted_attempts": 0,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw80": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "side",
+    "camera_yaw_deg": 81,
+    "attempts": 5,
+    "reps_counted": 5,
+    "possible_uncounted_attempts": 0,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      }
+    }
+  },
+  "yaw90": {
+    "schema": "session-reliability/1",
+    "exercise": "squat",
+    "camera_view": "side",
+    "camera_yaw_deg": 88,
+    "attempts": 5,
+    "reps_counted": 5,
+    "possible_uncounted_attempts": 0,
+    "cues": {
+      "depth": {
+        "label": "squat depth",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      },
+      "torso_lean": {
+        "label": "torso lean",
+        "analyzer_flagged": 0,
+        "analyzer_passed": 5,
+        "flagged_reliable": 0,
+        "passed_reliable": 5,
+        "uncertain": 0,
+        "not_observable": 0,
+        "main_reasons": [],
+        "recommended_view": "side-on"
+      }
+    }
+  }
+}

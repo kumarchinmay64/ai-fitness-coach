@@ -162,6 +162,17 @@ export function closePoseLandmarker() {
  * Calculates 2D angle in degrees formed by (pointA, pointB, pointC) with pointB as the vertex.
  * Returns null if any point is missing or below minimum confidence threshold.
  */
+/**
+ * MediaPipe returns x normalised by image width and y by image height. Angles computed directly
+ * from those values are distorted whenever the image is not square (a 16:9 webcam stretches
+ * horizontal segments relative to vertical ones). Scaling x by width / height puts both axes on
+ * the same scale, so that calculateJointAngle measures the angle seen in the image.
+ */
+export function toIsotropic(landmarks, aspectRatio = 1) {
+  if (!landmarks || !aspectRatio || aspectRatio === 1) return landmarks;
+  return landmarks.map((p) => (p ? { ...p, x: p.x * aspectRatio } : p));
+}
+
 export function calculateJointAngle(pointA, pointB, pointC, minConfidence = 0.25) {
   if (!pointA || !pointB || !pointC) return null;
 

@@ -10,9 +10,12 @@ import Badge from '../components/ui/Badge';
 import { MOCK_EXERCISES } from '../data/mockWorkouts';
 import { api } from '../services/api';
 import {
-  getPoseLandmarker
+  getPoseLandmarker,
+  toIsotropic
 } from '../services/poseDetection';
 import { ExerciseAnalyzer } from '../services/squatAnalyzer';
+import { RepReliabilityTracker, AttemptDetector, CUE_SPECS } from '../services/reliability';
+
 import {
   Camera,
   CameraOff,
@@ -29,6 +32,11 @@ import {
   Award,
   Video
 } from 'lucide-react';
+
+// Compute joint angles on an isotropic scale (see toIsotropic in poseDetection.js).
+// Set to false to reproduce the original behaviour, which measured angles in normalised coordinates.
+const CORRECT_ASPECT_RATIO = true;
+const RELIABILITY_STORAGE_KEY = 'ai_fitness_last_session_reliability';
 
 export default function LiveWorkoutPage() {
   const navigate = useNavigate();
@@ -80,6 +88,63 @@ export default function LiveWorkoutPage() {
   const mediaStreamRef = useRef(null);
   const landmarkerRef = useRef(null);
   const movementAnalyzerRef = useRef(new ExerciseAnalyzer(queryExerciseId || 'ex-1'));
+  // Reliability layer: estimates per repetition whether each cue could be observed from the camera view
+  const reliabilityRef = useRef(null);
+  const attemptDetectorRef = useRef(new AttemptDetector());
+  const repEventRef = useRef({ reps: 0, incomplete: 0, eventSinceAttempt: false });
+
+  const resetReliability = () => {
+    reliabilityRef.current = null;
+    attemptDetectorRef.current = new AttemptDetector();
+    repEventRef.current = { reps: 0, incomplete: 0, eventSinceAttempt: false };
+  };
+
+  const getReliabilityTracker = (aspect) => {
+    const mode = movementAnalyzerRef.current.currentMode;
+    if (!CUE_SPECS[mode] || mode === 'plank') return null;   // plank has no repetitions to assess
+    if (!reliabilityRef.current || reliabilityRef.current.exercise !== mode) {
+      reliabilityRef.current = new RepReliabilityTracker(mode, { aspect: CORRECT_ASPECT_RATIO ? 1 : aspect, angleAspect: 1 });
+      attemptDetectorRef.current = new AttemptDetector();
+      repEventRef.current = { reps: 0, incomplete: 0, eventSinceAttempt: false };
+    }
+    return reliabilityRef.current;
+  };
+
+  // Attach reliability to analyser events and soften or withhold cues that the camera could not observe
+  const applyReliability = (analysis, tracker, relFrame) => {
+    if (!tracker || !relFrame) return analysis;
+    const ev = repEventRef.current;
+    const mode = tracker.exercise;
+    const primaryCue = Object.keys(CUE_SPECS[mode])[0];
+    const attemptEnded = attemptDetectorRef.current.update(relFrame.hipDrop);
+    let out = analysis;
+    const counted = analysis.repCount > ev.reps;
+    const rejected = (analysis.incompleteReps ?? 0) > ev.incomplete;
+    if (counted || rejected) {
+      const active = movementAnalyzerRef.current.getActiveAnalyzer();
+      const verdicts = { [primaryCue]: counted };
+      if (mode === 'squat') verdicts.torso_lean = !(active.formErrors || []).includes('torso_lean');
+      const rec = tracker.endRep({ counted, analyzerVerdicts: verdicts });
+      const cue = rec.cues[primaryCue];
+      if (cue && cue.action === 'withhold') {
+        out = { ...analysis, feedback: { status: 'info', shouldSpeak: true,
+          message: RepReliabilityTracker.feedbackFor(cue, { verdict: analysis.feedback.message }) } };
+      } else if (cue && cue.action === 'soften' && !counted) {
+        out = { ...analysis, feedback: { ...analysis.feedback, message: `Borderline reading: ${analysis.feedback.message}` } };
+      }
+      ev.eventSinceAttempt = true;
+    } else if (attemptEnded && !ev.eventSinceAttempt) {
+      const rec = tracker.endRep({ counted: false });
+      if (rec.possible_uncounted_attempt) {
+        const hint = CUE_SPECS[mode][primaryCue].view_hint;
+        out = { ...analysis, feedback: { status: 'info', shouldSpeak: true,
+          message: `That looked like a rep I couldn't measure. Turn ${hint} to the camera.` } };
+      }
+    }
+    if (attemptEnded) ev.eventSinceAttempt = false;
+    ev.reps = analysis.repCount; ev.incomplete = analysis.incompleteReps ?? ev.incomplete;
+    return out;
+  };
   const lastSpeechTimestampRef = useRef(0);
   const lastSpeechTextRef = useRef('');
   const animFrameRef = useRef(null);
@@ -109,6 +174,7 @@ export default function LiveWorkoutPage() {
     if (movementAnalyzerRef.current) {
       movementAnalyzerRef.current.setExercise(selectedExerciseId);
       movementAnalyzerRef.current.reset();
+      resetReliability();
       setCurrentReps(0);
       setCurrentAngle(null);
       setFormScore(cameraMode === 'webcam' ? null : 94);
@@ -244,7 +310,16 @@ export default function LiveWorkoutPage() {
                 }
                 setLiveLandmarks(landmarks);
 
-                const analysis = movementAnalyzerRef.current.processFrame(landmarks, timestamp);
+                const aspect = video.videoWidth && video.videoHeight ? video.videoWidth / video.videoHeight : 16 / 9;
+                const analysisLandmarks = CORRECT_ASPECT_RATIO ? toIsotropic(landmarks, aspect) : landmarks;
+                const tracker = getReliabilityTracker(aspect);
+                const analyzerState = String(movementAnalyzerRef.current.getActiveAnalyzer().state || '').toUpperCase();
+                const relFrame = tracker ? tracker.addFrame(analysisLandmarks, analyzerState) : null;
+                const analysis = applyReliability(
+                  movementAnalyzerRef.current.processFrame(analysisLandmarks, timestamp),
+                  tracker,
+                  relFrame
+                );
                 setCurrentReps(analysis.repCount);
                 setCurrentAngle(analysis.currentAngle);
                 if (analysis.targetAngle) setAnalysisTargetAngle(analysis.targetAngle);
@@ -383,6 +458,7 @@ export default function LiveWorkoutPage() {
       setCameraPermissionGranted(true);
       setCameraMode('webcam');
       movementAnalyzerRef.current.reset();
+      resetReliability();
       setCurrentReps(0);
       setFormScore(null); // Clear fabricated score, await real rep completion
       setCurrentAngle(null); // Clear simulated angle, await live detection
@@ -421,6 +497,7 @@ export default function LiveWorkoutPage() {
       videoRef.current.srcObject = null;
     }
     movementAnalyzerRef.current.reset();
+      resetReliability();
     setLiveLandmarks(null);
     setCameraPermissionGranted(false);
     setCameraMode('simulation');
@@ -463,6 +540,11 @@ export default function LiveWorkoutPage() {
       calories: calories,
       caloriesEstimated: calories
     };
+    const reliability = reliabilityRef.current ? reliabilityRef.current.summary() : null;
+    if (reliability) {
+      summary.reliability = reliability;
+      try { localStorage.setItem(RELIABILITY_STORAGE_KEY, JSON.stringify(reliability)); } catch { /* storage unavailable */ }
+    }
     setSessionSummary(summary);
     setShowCompletionModal(true);
 
@@ -530,6 +612,7 @@ export default function LiveWorkoutPage() {
                 setCurrentReps(0);
                 movementAnalyzerRef.current.setExercise(newId);
                 movementAnalyzerRef.current.reset();
+      resetReliability();
                 setFormScore(cameraMode === 'webcam' ? null : 94);
               }}
               className="bg-dark-900 border border-slate-700 text-slate-100 text-xs font-semibold rounded-xl pl-3.5 pr-8 py-2.5 appearance-none focus:outline-none focus:border-electric-green"

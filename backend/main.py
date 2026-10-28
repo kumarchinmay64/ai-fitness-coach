@@ -180,6 +180,8 @@ class WorkoutSessionRequest(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     profile: Optional[Dict[str, Any]] = None
+    # Reliability summary of the last workout (schema "session-reliability/1"), optional
+    session: Optional[Dict[str, Any]] = None
 
 
 class MealLogRequest(BaseModel):
@@ -248,6 +250,7 @@ def chat(request: ChatRequest):
             question=request.message,
             profile=request.profile,
             return_metadata=True,
+            session=request.session,
         )
         total_ms = (time.time() - t_start) * 1000
         _log_api("RESPONSE_RETURN", f"Final response returned to frontend in {total_ms:.2f}ms", duration_ms=f"{total_ms:.2f}")

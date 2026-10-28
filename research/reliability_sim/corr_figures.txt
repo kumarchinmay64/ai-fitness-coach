@@ -1,0 +1,16 @@
+vis min risk with coverage>=0.30: 0.258  >=0.40: 0.258
+margin min risk with coverage>=0.30: 0.14  >=0.40: 0.21
+view min risk with coverage>=0.30: 0.047  >=0.40: 0.102
+obs min risk with coverage>=0.30: 0.047  >=0.40: 0.102
+ungated: coverage 0.616 risk 0.258
+default gate: coverage 0.359 risk 0.048
+vis>= 0.7 cov 0.616 risk 0.258
+vis>= 0.9 cov 0.615 risk 0.258
+margin>= 2 cov 0.46 risk 0.235
+margin>= 4 cov 0.345 risk 0.17
+obs>= 0.7 cov 0.484 risk 0.102
+   obs>= 0.7 & margin>=2: cov 0.364 risk 0.051
+obs>= 0.9 cov 0.299 risk 0.031
+   obs>= 0.9 & margin>=2: cov 0.231 risk 0.0
+obs>= 0.95 cov 0.299 risk 0.031
+   obs>= 0.95 & margin>=2: cov 0.231 risk 0.0

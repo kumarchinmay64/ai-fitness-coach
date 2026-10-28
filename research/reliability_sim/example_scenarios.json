@@ -1,0 +1,97 @@
+[
+ {
+  "id": "front_deep",
+  "question": "Was my squat deep enough today?",
+  "session": {
+   "schema": "session-reliability/1",
+   "exercise": "squat",
+   "camera_view": "front",
+   "camera_yaw_deg": 8,
+   "attempts": 5,
+   "reps_counted": 0,
+   "possible_uncounted_attempts": 5,
+   "cues": {
+    "depth": {
+     "label": "squat depth",
+     "analyzer_flagged": 0,
+     "analyzer_passed": 0,
+     "flagged_reliable": 0,
+     "passed_reliable": 0,
+     "uncertain": 0,
+     "not_observable": 5,
+     "main_reasons": [
+      "camera_view",
+      "unstable"
+     ],
+     "recommended_view": "side-on"
+    },
+    "torso_lean": {
+     "label": "torso lean",
+     "analyzer_flagged": 0,
+     "analyzer_passed": 0,
+     "flagged_reliable": 0,
+     "passed_reliable": 0,
+     "uncertain": 0,
+     "not_observable": 5,
+     "main_reasons": [
+      "camera_view"
+     ],
+     "recommended_view": "side-on"
+    }
+   }
+  },
+  "evidence": [
+   "(passage from knowledge base)"
+  ],
+  "profile": "goal: strength; level: beginner",
+  "raw_visibility": {
+   "depth": 0.95,
+   "torso_lean": 0.95
+  }
+ },
+ {
+  "id": "oblique_deep",
+  "question": "Why did the app tell me to go deeper?",
+  "session": {
+   "schema": "session-reliability/1",
+   "exercise": "squat",
+   "camera_view": "oblique",
+   "camera_yaw_deg": 33,
+   "attempts": 5,
+   "reps_counted": 0,
+   "possible_uncounted_attempts": 5,
+   "cues": {
+    "depth": {
+     "label": "squat depth",
+     "analyzer_flagged": 5,
+     "analyzer_passed": 0,
+     "flagged_reliable": 0,
+     "passed_reliable": 0,
+     "uncertain": 5,
+     "not_observable": 0,
+     "main_reasons": [
+      "camera_view_partial"
+     ],
+     "recommended_view": "side-on"
+    },
+    "torso_lean": {
+     "label": "torso lean",
+     "analyzer_flagged": 0,
+     "analyzer_passed": 5,
+     "flagged_reliable": 0,
+     "passed_reliable": 0,
+     "uncertain": 5,
+     "not_observable": 0,
+     "main_reasons": [
+      "camera_view_partial"
+     ],
+     "recommended_view": "side-on"
+    }
+   }
+  },
+  "evidence": [
+   "(passage)"
+  ],
+  "profile": ""
+ }
+]

@@ -1,5 +1,15 @@
 const API_URL = "http://127.0.0.1:8000";
 
+// Reliability summary of the most recent workout (written by LiveWorkoutPage), or null.
+function readLastSessionReliability() {
+  try {
+    const raw = localStorage.getItem('ai_fitness_last_session_reliability');
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function askAICoach(userQuestion, profile = null, onStatusChange = null) {
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [Frontend Chat] Frontend message submitted: "${userQuestion}"`);
@@ -26,6 +36,7 @@ export async function askAICoach(userQuestion, profile = null, onStatusChange = 
       body: JSON.stringify({
         message: userQuestion,
         profile: profile,
+        session: readLastSessionReliability(),
       }),
     });
 
